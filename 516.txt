@@ -1,0 +1,48 @@
+後面一點
+高右下
+[ee_pose_in_base-1] [INFO] [1747395555.215042901] [moveit_cpp]: 🎯 Camera XYZ: (0.071, -0.023, 0.105)
+[ee_pose_in_base-1] [INFO] [1747395555.215094223] [moveit_cpp]: 🦾 In EE:     (0.031, 0.012, 0.040)
+[ee_pose_in_base-1] [INFO] [1747395555.215111008] [moveit_cpp]: 🏁 In Base:   (0.030, 0.198, 0.258)
+[ee_pose_in_base-1] [INFO] [1747395555.215129586] [moveit_cpp]: Camera to base: x=-0.041 y=0.226 z=0.154
+[ee_pose_in_base-1] [INFO] [1747395555.215145293] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.217
+[ee_pose_in_base-1] [INFO] [1747395555.215161423] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.030 y=0.198 z=0.105
+
+
+高左下
+[ee_pose_in_base-1] [INFO] [1747395754.060020241] [moveit_cpp]: 🎯 Camera XYZ: (-0.060, -0.023, 0.105)
+[ee_pose_in_base-1] [INFO] [1747395754.060104262] [moveit_cpp]: 🦾 In EE:     (-0.100, 0.012, 0.040)
+[ee_pose_in_base-1] [INFO] [1747395754.060121819] [moveit_cpp]: 🏁 In Base:   (-0.101, 0.198, 0.258)
+[ee_pose_in_base-1] [INFO] [1747395754.060140093] [moveit_cpp]: Camera to base: x=-0.041 y=0.227 z=0.154
+[ee_pose_in_base-1] [INFO] [1747395754.060155286] [moveit_cpp]: ee_in_base: x=-0.001 y=0.189 z=0.217
+[ee_pose_in_base-1] [INFO] [1747395754.060171259] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=-0.101 y=0.198 z=0.105
+
+
+
+前面一點
+高左上
+[ee_pose_in_base-1] [INFO] [1747395897.280317287] [moveit_cpp]: 🎯 Camera XYZ: (-0.048, 0.012, 0.105)
+[ee_pose_in_base-1] [INFO] [1747395897.280416941] [moveit_cpp]: 🦾 In EE:     (-0.088, 0.047, 0.040)
+[ee_pose_in_base-1] [INFO] [1747395897.280442568] [moveit_cpp]: 🏁 In Base:   (-0.089, 0.234, 0.260)
+[ee_pose_in_base-1] [INFO] [1747395897.280476981] [moveit_cpp]: Camera to base: x=-0.041 y=0.227 z=0.154
+[ee_pose_in_base-1] [INFO] [1747395897.280496018] [moveit_cpp]: ee_in_base: x=-0.001 y=0.189 z=0.218
+[ee_pose_in_base-1] [INFO] [1747395897.280512574] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=-0.089 y=0.234 z=0.105
+
+高右上
+[ee_pose_in_base-1] [INFO] [1747396135.198977444] [moveit_cpp]: 🎯 Camera XYZ: (0.087, 0.015, 0.105)
+[ee_pose_in_base-1] [INFO] [1747396135.199088597] [moveit_cpp]: 🦾 In EE:     (0.047, 0.050, 0.040)
+[ee_pose_in_base-1] [INFO] [1747396135.199107559] [moveit_cpp]: 🏁 In Base:   (0.044, 0.237, 0.259)
+[ee_pose_in_base-1] [INFO] [1747396135.199124928] [moveit_cpp]: Camera to base: x=-0.042 y=0.226 z=0.153
+[ee_pose_in_base-1] [INFO] [1747396135.199141818] [moveit_cpp]: ee_in_base: x=-0.002 y=0.189 z=0.216
+[ee_pose_in_base-1] [INFO] [1747396135.199157811] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.044 y=0.237 z=0.105
+
+
+
+

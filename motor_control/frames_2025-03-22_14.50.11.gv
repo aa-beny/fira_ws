@@ -1,0 +1,16 @@
+digraph G {
+"link5" -> "camera_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"link4" -> "link5"[label=" Broadcaster: default_authority\nAverage rate: 15.826\nBuffer length: 4.992\nMost recent transform: 1742626211.007412\nOldest transform: 1742626206.015687\n"];
+"link6" -> "gripper_link2"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"link5" -> "link6"[label=" Broadcaster: default_authority\nAverage rate: 15.826\nBuffer length: 4.992\nMost recent transform: 1742626211.007412\nOldest transform: 1742626206.015687\n"];
+"world" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "link1"[label=" Broadcaster: default_authority\nAverage rate: 15.826\nBuffer length: 4.992\nMost recent transform: 1742626211.007412\nOldest transform: 1742626206.015687\n"];
+"link1" -> "link2"[label=" Broadcaster: default_authority\nAverage rate: 15.826\nBuffer length: 4.992\nMost recent transform: 1742626211.007412\nOldest transform: 1742626206.015687\n"];
+"link2" -> "link3"[label=" Broadcaster: default_authority\nAverage rate: 15.826\nBuffer length: 4.992\nMost recent transform: 1742626211.007412\nOldest transform: 1742626206.015687\n"];
+"link3" -> "link4"[label=" Broadcaster: default_authority\nAverage rate: 15.826\nBuffer length: 4.992\nMost recent transform: 1742626211.007412\nOldest transform: 1742626206.015687\n"];
+"gripper_link2" -> "gripper_link1"[label=" Broadcaster: default_authority\nAverage rate: 15.826\nBuffer length: 4.992\nMost recent transform: 1742626211.007412\nOldest transform: 1742626206.015687\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1742626211.0143685"[ shape=plaintext ] ;
+}->"world";
+}

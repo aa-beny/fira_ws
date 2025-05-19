@@ -1,0 +1,3 @@
+[console_scripts]
+task_master = core.task_master:main
+

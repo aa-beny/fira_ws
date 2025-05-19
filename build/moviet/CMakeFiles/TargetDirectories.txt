@@ -1,0 +1,9 @@
+/home/open/work/build/moviet/CMakeFiles/uninstall.dir
+/home/open/work/build/moviet/CMakeFiles/moviet_uninstall.dir
+/home/open/work/build/moviet/CMakeFiles/test.dir
+/home/open/work/build/moviet/CMakeFiles/edit_cache.dir
+/home/open/work/build/moviet/CMakeFiles/rebuild_cache.dir
+/home/open/work/build/moviet/CMakeFiles/list_install_components.dir
+/home/open/work/build/moviet/CMakeFiles/install.dir
+/home/open/work/build/moviet/CMakeFiles/install/local.dir
+/home/open/work/build/moviet/CMakeFiles/install/strip.dir

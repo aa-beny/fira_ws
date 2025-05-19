@@ -1,0 +1,58 @@
+[ee_pose_in_base-1] [INFO] [1747301541.118027536] [moveit_cpp]: 🎯 Camera XYZ: (0.515, -0.259, 0.105)
+[ee_pose_in_base-1] [INFO] [1747301541.118164062] [moveit_cpp]: 🦾 In EE:     (0.475, -0.224, -0.065)
+[ee_pose_in_base-1] [INFO] [1747301541.118182139] [moveit_cpp]: 🏁 In Base:   (0.473, -0.034, 0.141)
+[ee_pose_in_base-1] [INFO] [1747301541.118198773] [moveit_cpp]: Camera to base: x=-0.041 y=0.226 z=0.153
+[ee_pose_in_base-1] [INFO] [1747301541.118214068] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.217
+[ee_pose_in_base-1] [INFO] [1747301541.118229616] [moveit_cpp]: 🟩 HIGH-RIGHT → dx=-0.255 dy=0.188
+[ee_pose_in_base-1] [INFO] [1747301541.118243051] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.218 y=0.154 z=0.105
+[ee_pose_in_base-1] [INFO] [1747301541.118257757] [moveit_cpp]: 🎯 補償後目標位置：x=0.218, y=0.154, z=0.105
+[ee_pose_in_base-1] [INFO] [1747301541.118272710] [moveit_cpp]: 🔁 Orientation from TF: x=0.022 y=0.001 z=-0.001 w=1.000
+
+
+
+
+
+d recently. Stopping pose publish.
+[ee_pose_in_base-1] [INFO] [1747301954.381085600] [moveit_cpp]: 🎯 Camera XYZ: (0.500, -0.285, 0.105)
+[ee_pose_in_base-1] [INFO] [1747301954.381198838] [moveit_cpp]: 🦾 In EE:     (0.460, -0.250, -0.065)
+[ee_pose_in_base-1] [INFO] [1747301954.381217015] [moveit_cpp]: 🏁 In Base:   (0.459, -0.056, 0.137)
+[ee_pose_in_base-1] [INFO] [1747301954.381233961] [moveit_cpp]: Camera to base: x=-0.041 y=0.229 z=0.158
+[ee_pose_in_base-1] [INFO] [1747301954.381249315] [moveit_cpp]: ee_in_base: x=-0.001 y=0.189 z=0.220
+[ee_pose_in_base-1] [INFO] [1747301954.381265172] [moveit_cpp]: 🟩 HIGH-RIGHT → dx=-0.395 dy=0.188
+[ee_pose_in_base-1] [INFO] [1747301954.381278900] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.064 y=0.132 z=0.105
+[ee_pose_in_base-1] [INFO] [1747301954.381297173] [moveit_cpp]: 🎯 補償後目標位置：x=0.064, y=0.132, z=0.105
+[ee_pose_in_base-1] [INFO] [1747301954.381312844] [moveit_cpp]: 🔁 Orientation from TF: x=0.035 y=0.001 z=-0.000 w=0.999
+
+
+
+[ee_pose_in_base-1] [INFO] [1747302200.456566063] [moveit_cpp]: 🎯 Camera XYZ: (-0.225, -0.196, 0.105)
+[ee_pose_in_base-1] [INFO] [1747302200.456681210] [moveit_cpp]: 🦾 In EE:     (-0.265, -0.161, -0.065)
+[ee_pose_in_base-1] [INFO] [1747302200.456699608] [moveit_cpp]: 🏁 In Base:   (-0.267, 0.030, 0.146)
+[ee_pose_in_base-1] [INFO] [1747302200.456716933] [moveit_cpp]: Camera to base: x=-0.041 y=0.224 z=0.163
+[ee_pose_in_base-1] [INFO] [1747302200.456745663] [moveit_cpp]: ee_in_base: x=-0.001 y=0.184 z=0.225
+[ee_pose_in_base-1] [INFO] [1747302200.456761229] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.395 dy=0.188
+[ee_pose_in_base-1] [INFO] [1747302200.456774513] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.128 y=0.218 z=0.105
+[ee_pose_in_base-1] [INFO] [1747302200.456789492] [moveit_cpp]: 🎯 補償後目標位置：x=0.128, y=0.218, z=0.105
+[ee_pose_in_base-1] [INFO] [1747302200.456805097] [moveit_cpp]: 🔁 Orientation from TF: x=0.044 y=-0.000 z=-0.002 w=0.999
+
+
+
+[ee_pose_in_base-1] [INFO] [1747302528.685637927] [moveit_cpp]: 🎯 Camera XYZ: (-0.291, -0.239, 0.105)
+[ee_pose_in_base-1] [INFO] [1747302528.685754883] [moveit_cpp]: 🦾 In EE:     (-0.331, -0.204, -0.065)
+[ee_pose_in_base-1] [INFO] [1747302528.685773039] [moveit_cpp]: 🏁 In Base:   (-0.332, -0.012, 0.143)
+[ee_pose_in_base-1] [INFO] [1747302528.685790128] [moveit_cpp]: Camera to base: x=-0.041 y=0.227 z=0.154
+[ee_pose_in_base-1] [INFO] [1747302528.685805029] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.217
+[ee_pose_in_base-1] [INFO] [1747302528.685821075] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.175 dy=0.188
+[ee_pose_in_base-1] [INFO] [1747302528.685834632] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=-0.157 y=0.176 z=0.105
+[ee_pose_in_base-1] [INFO] [1747302528.685849175] [moveit_cpp]: 🎯 補償後目標位置：x=-0.157, y=0.176, z=0.105
+[ee_pose_in_base-1] [INFO] [1747302528.685864565] [moveit_cpp]: 🔁 Orientation from TF: x=0.023 y=0.001 z=-0.001 w=1.000
+
+

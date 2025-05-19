@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="smw_g02_camera_urdf">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import smw_g02_camera_urdf urdf file -->
+    <xacro:include filename="$(find arm_control)/urdf/myarm_urdf.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="smw_g02_camera_urdf.ros2_control.xacro" />
+
+
+    <xacro:smw_g02_camera_urdf_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

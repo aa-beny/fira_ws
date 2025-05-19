@@ -1,0 +1,155 @@
+🧰 處理步驟（縮小標記板）：
+用 OpenCV 重新產生新的小尺寸的 ChArUco PDF / PNG 標記板 ✅
+
+更新 YAML 中的數值參數（如下） ✅
+
+squaresSidesSizeM → 小一點（例如從 0.02 → 0.01）
+
+markersSidesSizeM → 小一點（例如從 0.015 → 0.0075）
+
+numberOfSquaresInX 和 numberOfSquaresInY 依實際板子格數設計
+
+不需要修改 .cpp 檔案！只要 .yaml 設對就好。
+1. ros2 launch realsense2_camera rs_launch.py rgb_camera.color_profile:=1920x1080x30 camera_namespace:='/'
+包名：realsense2_camera
+節點名稱：/camera
+
+因此，節點的完整名稱為 /camera。
+rgb_camera.color_profile:=1920x1080x30：設置RGB相機的分辨率為1920×1080，幀率為30fps
+camera_namespace:='/'：將相機節點放在根命名空間下，而不是默認的'/camera'命名空間
+包名：realsense2_camera
+命名空間和節點名稱
+執行文件：realsense2_camera_node
+
+
+2.ros2 launch charuco_detector charuco_detector.launch.py
+
+charuco_parameters 使用情況
+
+node_handle_->declare_parameter("charuco_parameters.squaresSidesSizeM", 0.02);
+...
+node_handle_->declare_parameter("charuco_parameters.dictionaryId", 0);
+這部分讀入棋盤大小、marker 大小、dictionary ID 等資訊，對應你 YAML 裡：
+charuco_parameters:
+  squaresSidesSizeM: 0.0200
+  markersSidesSizeM: 0.0150
+  dictionaryId: 3
+✅ 完全對應，會影響到棋盤建立與姿態估計的準確性。
+
+squaresSidesSizeM：標記板方格邊長（單位：米），預設 0.0200。
+
+markersSidesSizeM：標記板中 ArUco 標記的邊長（單位：米），預設 0.0150。
+
+numberOfSquaresInX/Y：標記板在 X/Y 方向的方格數，預設 10x14。
+
+dictionaryId：ArUco 標記的字典類型，預設 3（對應 DICT_4X4_50）。
+
+
+ROS相關參數：/config/ros.yaml
+ChArUco相關參數：/yaml/charuco.yaml
+✅ 功能回顧（OK）
+從 /image_raw 取得即時影像。
+
+根據 /camera_info 取得相機內參。
+
+偵測 ChArUco 棋盤，進行 pose estimation（得到 camera-to-object pose）。
+
+可視化畫面發布給 RViz2。
+
+可以（可選）透過 TF 廣播目標板相對相機的座標關係（用於全局定位／多感測器融合）。
+
+
+📥 訂閱的 Topic（需要輸入資料）✅
+Topic Name	Message Type	說明
+/image_raw	sensor_msgs::msg::Image	攝影機原始畫面來源
+/camera_info	sensor_msgs::msg::CameraInfo	相機的內部參數（投影矩陣、畸變參數等）用於 PnP 求解姿態
+📤 發布的 Topic（發布後處理資訊）✅
+Topic Name	Message Type	說明
+/image_raw_charuco_detection/image	sensor_msgs::msg::Image	加上檢測結果的畫面，供 RViz2 顯示
+/charuco_pose 或 /camera_object	geometry_msgs::msg::PoseStamped 或 TransformStamped	相機相對於目標板的姿態資訊（cMo）
+/tf	tf2_msgs::msg::TFMessage	廣播 TF 變換，例如 charuco_board → camera_frame（可能為 base_link 或 camera_link）
+
+來自charuco_detector包
+執行檔是charuco_detector_node
+節點名稱為charuco_detector
+這個節點會從攝影機畫面中偵測出 ChArUco（Charuco = Chessboard + ArUco）圖樣，並執行以下幾個任務：
+
+讀取參數設定：從 ROS parameter server（或 YAML 檔案）讀取各種與圖樣偵測和圖像處理相關的參數設定。
+
+訂閱影像與相機資訊：訂閱來自攝影機的 image_raw 和 camera_info 主題。
+
+影像處理與圖樣偵測：
+
+先做一些影像前處理（例如 CLAHE、雙邊濾波、median blur 等）。
+
+使用 OpenCV 的 aruco 模組來偵測圖樣。
+
+估計姿態：根據相機內部參數進行 PnP（Perspective-n-Point）計算，得出 ChArUco 板的姿態。
+
+發布資訊：
+
+發布處理後的影像（帶偵測圖樣的結果）。
+
+發布 ChArUco 板的位姿（PoseStamped 訊息）。
+
+發布對應的 TF 座標轉換。
+🗂️ 主要參數檔案
+ros.yaml: ROS 參數，如訂閱主題、TF 設定等
+
+charuco.yaml: ChArUco 偵測與圖像處理相關參數
+
+camera_calibration.ini: 相機的內部參數與畸變參數
+
+
+3.ros2 run visp_hand2eye_calibration visp_hand2eye_calibration_calibrator 
+🔧 接收手臂和相機的位姿資料，然後 🧠 計算相機相對於手臂的轉換矩陣（eMc）。
+topic 名稱	資料內容
+camera_object_topic	攝影機對物體的位姿（cMo） 接收相機坐標系到標定物體坐標系的變換矩陣。
+world_effector_topic	世界座標對手臂末端的位姿（wMe）接收世界坐標系到機械臂末端坐標系的變換矩陣。
+每接收到一次 transform 資料就會存進對應的 vector（cMo_vec_, wMe_vec_）
+
+🧠 三個 service
+Service 名稱	功能簡介
+compute_effector_camera_service	根據目前已接收到的 cMo 和 wMe 做 hand-eye calibration。輸出 eMc。
+compute_effector_camera_quick_service	一次性提供多組 cMo 和 wMe，快速計算 eMc。不會用 subscriber。
+reset_service	清空目前暫存的 cMo_vec_ 與 wMe_vec_。
+從 CMakeLists.txt 中，我可以看到可執行文件是這樣定義的：
+add_executable(${PROJECT_NAME}_calibrator
+  src/calibrator.cpp
+  src/calibrator_main.cpp
+)
+
+3. 使用場景
+(1) 手眼標定流程
+收集數據：
+
+移動機械臂至多個不同位姿。
+
+每個位姿下，發布對應的 cMo（相機到物體）和 wMe（世界到機械臂末端）位姿數據。
+
+調用服務：
+
+調用 compute_effector_camera_service 或 compute_effector_camera_quick_service 計算 eMc。
+
+重置數據（可選）：
+
+若需重新標定，調用 reset_service 清空歷史數據。
+
+(2) 與客戶端協作
+client 節點：
+可模擬數據發布（如 client.cpp 中的 initAndSimulate()），生成多組 cMo 和 wMe 數據並調用服務，簡化測試流程。
+
+
+
+
+rviz2 
+	(add/by topic/camera/image_raw_charuco_detection/image)
+	(add /by display type/tf/ then change Fixed frame drop down manu to base_link)
+ros2 run flexbe_app nwjs_install / 
+ros2 launch flexbe_app flexbe_full.launch.py
+	(load behavior/manual hand eye calibration/runtime control/check eye_in_hand/adjust calib_pose_num)
+	
+pip3 install numpy-quaternion
+ros2 run hiwin_example hand_in_eye_calibration
+### get tool to camera's reletive position eye_in_hand_calibration.ini( ./hand_eye_calibration_ROS2/charuco_detector_ROS2/charuco_detector/config/hand_eye_calibration) ###
+-------

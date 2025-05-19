@@ -1,0 +1,79 @@
+docker start -ai fira
+self.avg_z直越大月靠近
+什麼都沒有 0.34 0.35
+一個物體0.32 0.33 0.315 0.31
+一層 0.31 0.30
+兩層0.4多
+ros2 run tf2_tools view_frames
+"/target_pose_in_base"
+ros2 topic pub --once /target_pose_in_base geometry_msgs/msg/Pose \
+"{position: {x: -0.061, y: 0.287, z: 0.030}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}"
+
+ros2 topic pub --once /target_pose_in_base geometry_msgs/msg/Pose "{position: {x: 0.081, y: -0.037, z: 0.060}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}"
+
+cd ~/fira_ws
+發作標到物體點
+ros2 topic pub --once /allow_publish_pose std_msgs/Bool "data: true"
+到拍照點
+ros2 topic pub --once /do_detect_fira std_msgs/Bool "data: true"
+做完要false reset一下
+ros2 topic pub --once /do_detect_fira std_msgs/Bool "data: false"
+
+
+ros2 topic pub --once /car_arrived std_msgs/Bool "data: true"
+
+
+docker build -f ubuntu22.04_ros2/Dockerfile -t my_image_name .
+一般相機出廠預設是：
+
+X軸向右
+
+Y軸向下
+
+Z軸向前（從鏡頭往外）
+例如量出：
+camera_to_ee_translate: [-0.04, 0.10, -0.13]
+X = -0.05 m （相機參考點在 link6 的左邊）
+
+Y = +0.08 m （相機在 link6 上方）
+
+Z = -0.60 m （相機在 link6 上面朝向前方，距離末端60公分）
+
+看到什麼情況	該怎麼調
+座標點偏右	X 減小（往左）
+座標點偏下	Y 增加（相機太低）
+座標點離太遠	Z 增加（拉近相機）
+座標點旋轉錯誤（180度）	換四元數 [0, 0, 1, 0] or [0, 1, 0, 0] 等測試
+docker start -ai fira
+
+cd motor_control/
+sudo rosdep init
+rosdep update
+sudo apt update
+rosdep install --from-paths src --ignore-src -r -y
+# 刪除先前編譯留下的中間資料
+rm -rf build install log
+sudo chmod 777 /dev/ttyUSB0
+開控制界面
+
+ros2 launch small_arm_moveit_config real_demo.launch.py
+
+ros2 run realsense color_range
+ros2 run realsense realsense_read
+ros2 run realsense paddleorc
+ros2 run realsense depth_calculate
+
+ros2 launch realsense visual_realsense.py
+
+
+
+
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py cpp_node:=gripper_joint_value
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py cpp_node:=ee_pose_in_base
+
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py 
+
+不要切太快會卡住
+ros2 topic pub --once /gripper_command std_msgs/msg/Bool "data: true"
+下面夾
+ros2 topic pub --once /gripper_command std_msgs/msg/Bool "data: false"

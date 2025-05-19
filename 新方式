@@ -1,0 +1,151 @@
+中右
+[ee_pose_in_base-1] [INFO] [1747308602.414031388] [moveit_cpp]: 🎯 Camera XYZ: (-0.029, -0.001, 0.058)
+[ee_pose_in_base-1] [INFO] [1747308602.414146395] [moveit_cpp]: 🦾 In EE:     (-0.069, 0.034, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308602.414165678] [moveit_cpp]: 🏁 In Base:   (-0.070, 0.225, 0.164)
+[ee_pose_in_base-1] [INFO] [1747308602.414182653] [moveit_cpp]: Camera to base: x=-0.041 y=0.226 z=0.164
+[ee_pose_in_base-1] [INFO] [1747308602.414198010] [moveit_cpp]: ee_in_base: x=-0.001 y=0.185 z=0.225
+[ee_pose_in_base-1] [INFO] [1747308602.414214014] [moveit_cpp]: 🟧 MID-LEFT → dx=0.068 dy=0.058
+[ee_pose_in_base-1] [INFO] [1747308602.414228965] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=-0.002 y=0.283 z=0.058
+[ee_pose_in_base-1] [INFO] [1747308602.414244847] [moveit_cpp]: 🎯 補償後目標位置：x=-0.002, y=0.283, z=0.058
+[ee_pose_in_base-1] [INFO] [1747308602.414261379] [moveit_cpp]: 🔁 Orientation from TF: x=0.047 y=-0.001 z=-0.002 w=0.999
+
+[ee_pose_in_base-1] [INFO] [1747308689.422180533] [moveit_cpp]: 🎯 Camera XYZ: (-0.030, -0.008, 0.058)
+[ee_pose_in_base-1] [INFO] [1747308689.422312309] [moveit_cpp]: 🦾 In EE:     (-0.070, 0.027, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308689.422331372] [moveit_cpp]: 🏁 In Base:   (-0.071, 0.221, 0.157)
+[ee_pose_in_base-1] [INFO] [1747308689.422348123] [moveit_cpp]: Camera to base: x=-0.042 y=0.229 z=0.158
+[ee_pose_in_base-1] [INFO] [1747308689.422363595] [moveit_cpp]: ee_in_base: x=-0.002 y=0.189 z=0.220
+[ee_pose_in_base-1] [INFO] [1747308689.422379372] [moveit_cpp]: 🟧 MID-LEFT → dx=0.068 dy=0.058
+[ee_pose_in_base-1] [INFO] [1747308689.422393751] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=-0.003 y=0.279 z=0.058
+[ee_pose_in_base-1] [INFO] [1747308689.422420120] [moveit_cpp]: 🎯 補償後目標位置：x=-0.003, y=0.279, z=0.058
+[ee_pose_in_base-1] [INFO] [1747308689.422436897] [moveit_cpp]: 🔁 Orientation from TF: x=0.035 y=0.000 z=0.000 w=0.999
+
+
+
+
+[ee_pose_in_base-1] [INFO] [1747308729.969480951] [moveit_cpp]: 🎯 Camera XYZ: (-0.029, -0.012, 0.058)
+[ee_pose_in_base-1] [INFO] [1747308729.969616996] [moveit_cpp]: 🦾 In EE:     (-0.069, 0.023, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308729.969635182] [moveit_cpp]: 🏁 In Base:   (-0.070, 0.217, 0.158)
+[ee_pose_in_base-1] [INFO] [1747308729.969652186] [moveit_cpp]: Camera to base: x=-0.042 y=0.229 z=0.158
+[ee_pose_in_base-1] [INFO] [1747308729.969671320] [moveit_cpp]: ee_in_base: x=-0.002 y=0.189 z=0.221
+[ee_pose_in_base-1] [INFO] [1747308729.969687683] [moveit_cpp]: 🟧 MID-LEFT → dx=0.068 dy=0.058
+[ee_pose_in_base-1] [INFO] [1747308729.969702018] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=-0.002 y=0.275 z=0.058
+[ee_pose_in_base-1] [INFO] [1747308729.969717483] [moveit_cpp]: 🎯 補償後目標位置：x=-0.002, y=0.275, z=0.058
+[ee_pose_in_base-1] [INFO] [1747308729.969733127] [moveit_cpp]: 🔁 Orientation from TF: x=0.036 y=-0.000 z=0.001 w=0.999
+[ee_pose_in_base-1] [WARN] [1747308731.477460568] [moveit_cpp]: No pose received recently. Stopping pose publish.
+
+
+高右
+
+
+
+
+
+
+
+[ee_pose_in_base-1] [INFO] [1747308835.214827281] [moveit_cpp]: 🎯 Camera XYZ: (-0.051, -0.013, 0.105)
+[ee_pose_in_base-1] [INFO] [1747308835.214959369] [moveit_cpp]: 🦾 In EE:     (-0.091, 0.022, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308835.214977723] [moveit_cpp]: 🏁 In Base:   (-0.092, 0.216, 0.159)
+[ee_pose_in_base-1] [INFO] [1747308835.214993636] [moveit_cpp]: Camera to base: x=-0.041 y=0.228 z=0.160
+[ee_pose_in_base-1] [INFO] [1747308835.215008469] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.222
+[ee_pose_in_base-1] [INFO] [1747308835.215023356] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.205 dy=0.208
+[ee_pose_in_base-1] [INFO] [1747308835.215037090] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.113 y=0.424 z=0.105
+[ee_pose_in_base-1] [INFO] [1747308835.215052247] [moveit_cpp]: 🎯 補償後目標位置：x=0.113, y=0.424, z=0.105
+[ee_pose_in_base-1] [INFO] [1747308835.215068392] [moveit_cpp]: 🔁 Orientation from TF: x=0.039 y=0.000 z=-0.002 w=0.999
+
+
+[ee_pose_in_base-1] [INFO] [1747308863.688125847] [moveit_cpp]: 🎯 Camera XYZ: (-0.050, -0.009, 0.105)
+[ee_pose_in_base-1] [INFO] [1747308863.688262895] [moveit_cpp]: 🦾 In EE:     (-0.090, 0.026, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308863.688281090] [moveit_cpp]: 🏁 In Base:   (-0.091, 0.220, 0.159)
+[ee_pose_in_base-1] [INFO] [1747308863.688297449] [moveit_cpp]: Camera to base: x=-0.041 y=0.228 z=0.160
+[ee_pose_in_base-1] [INFO] [1747308863.688312058] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.222
+[ee_pose_in_base-1] [INFO] [1747308863.688327656] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.205 dy=0.208
+[ee_pose_in_base-1] [INFO] [1747308863.688341158] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.114 y=0.428 z=0.105
+[ee_pose_in_base-1] [INFO] [1747308863.688356249] [moveit_cpp]: 🎯 補償後目標位置：x=0.114, y=0.428, z=0.105
+[ee_pose_in_base-1] [INFO] [1747308863.688373023] [moveit_cpp]: 🔁 Orientation from TF: x=0.039 y=0.000 z=-0.002 w=0.999
+
+[ee_pose_in_base-1] [INFO] [1747308916.717825856] [moveit_cpp]: 🎯 Camera XYZ: (-0.050, -0.011, 0.105)
+[ee_pose_in_base-1] [INFO] [1747308916.717937200] [moveit_cpp]: 🦾 In EE:     (-0.090, 0.024, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308916.717955976] [moveit_cpp]: 🏁 In Base:   (-0.091, 0.217, 0.159)
+[ee_pose_in_base-1] [INFO] [1747308916.717973174] [moveit_cpp]: Camera to base: x=-0.041 y=0.228 z=0.160
+[ee_pose_in_base-1] [INFO] [1747308916.717988422] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.222
+[ee_pose_in_base-1] [INFO] [1747308916.718004158] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.205 dy=0.208
+[ee_pose_in_base-1] [INFO] [1747308916.718018661] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.114 y=0.425 z=0.105
+[ee_pose_in_base-1] [INFO] [1747308916.718034373] [moveit_cpp]: 🎯 補償後目標位置：x=0.114, y=0.425, z=0.105
+[ee_pose_in_base-1] [INFO] [1747308916.718050412] [moveit_cpp]: 🔁 Orientation from TF: x=0.039 y=0.000 z=-0.002 w=0.999
+
+
+[ee_pose_in_base-1] [INFO] [1747308943.001958856] [moveit_cpp]: 🎯 Camera XYZ: (-0.050, -0.004, 0.105)
+[ee_pose_in_base-1] [INFO] [1747308943.002067410] [moveit_cpp]: 🦾 In EE:     (-0.090, 0.031, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308943.002086590] [moveit_cpp]: 🏁 In Base:   (-0.091, 0.225, 0.160)
+[ee_pose_in_base-1] [INFO] [1747308943.002104261] [moveit_cpp]: Camera to base: x=-0.041 y=0.228 z=0.160
+[ee_pose_in_base-1] [INFO] [1747308943.002119017] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.222
+[ee_pose_in_base-1] [INFO] [1747308943.002134576] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.205 dy=0.208
+[ee_pose_in_base-1] [INFO] [1747308943.002148645] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.114 y=0.433 z=0.105
+[ee_pose_in_base-1] [INFO] [1747308943.002163689] [moveit_cpp]: 🎯 補償後目標位置：x=0.114, y=0.433, z=0.105
+[ee_pose_in_base-1] [INFO] [1747308943.002185298] [moveit_cpp]: 🔁 Orientation from TF: x=0.039 y=0.000 z=-0.002 w=0.999
+[ee_pose_in_base-1] [WARN] [1747308944.800267044] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308945.800287221] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308946.800302943] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308947.800322731] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308948.800340517] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308949.800372962] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308950.800400253] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308951.810933341] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308952.800492806] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308953.800444907] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308954.800471463] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308955.800456548] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308956.801465205] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308957.800631366] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308958.800546190] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308959.800568239] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [INFO] [1747308960.689787925] [moveit_cpp]: 🎯 Camera XYZ: (-0.051, -0.006, 0.105)
+[ee_pose_in_base-1] [INFO] [1747308960.689894598] [moveit_cpp]: 🦾 In EE:     (-0.091, 0.029, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308960.689913394] [moveit_cpp]: 🏁 In Base:   (-0.092, 0.223, 0.159)
+[ee_pose_in_base-1] [INFO] [1747308960.689930855] [moveit_cpp]: Camera to base: x=-0.041 y=0.228 z=0.160
+[ee_pose_in_base-1] [INFO] [1747308960.689946709] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.222
+[ee_pose_in_base-1] [INFO] [1747308960.689962301] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.205 dy=0.208
+[ee_pose_in_base-1] [INFO] [1747308960.689976278] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.113 y=0.431 z=0.105
+[ee_pose_in_base-1] [INFO] [1747308960.689992009] [moveit_cpp]: 🎯 補償後目標位置：x=0.113, y=0.431, z=0.105
+[ee_pose_in_base-1] [INFO] [1747308960.690008014] [moveit_cpp]: 🔁 Orientation from TF: x=0.038 y=0.000 z=-0.002 w=0.999
+[ee_pose_in_base-1] [WARN] [1747308961.800599847] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308962.800624425] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [INFO] [1747308963.542459890] [moveit_cpp]: 🎯 Camera XYZ: (-0.050, -0.006, 0.105)
+[ee_pose_in_base-1] [INFO] [1747308963.542997398] [moveit_cpp]: 🦾 In EE:     (-0.090, 0.029, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308963.543018858] [moveit_cpp]: 🏁 In Base:   (-0.091, 0.222, 0.160)
+[ee_pose_in_base-1] [INFO] [1747308963.543036344] [moveit_cpp]: Camera to base: x=-0.041 y=0.228 z=0.160
+[ee_pose_in_base-1] [INFO] [1747308963.543051247] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.222
+[ee_pose_in_base-1] [INFO] [1747308963.543067095] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.205 dy=0.208
+[ee_pose_in_base-1] [INFO] [1747308963.543080571] [moveit_cpp]: Converted Pose:
+[ee_pose_in_base-1]   XY Transformed | Z (raw+offset)
+[ee_pose_in_base-1]   → x=0.114 y=0.430 z=0.105
+[ee_pose_in_base-1] [INFO] [1747308963.543095707] [moveit_cpp]: 🎯 補償後目標位置：x=0.114, y=0.430, z=0.105
+[ee_pose_in_base-1] [INFO] [1747308963.543161608] [moveit_cpp]: 🔁 Orientation from TF: x=0.038 y=-0.000 z=-0.002 w=0.999
+[ee_pose_in_base-1] [WARN] [1747308964.800696088] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [WARN] [1747308965.800688868] [moveit_cpp]: No pose received recently. Stopping pose publish.
+[ee_pose_in_base-1] [INFO] [1747308966.747539030] [moveit_cpp]: 🎯 Camera XYZ: (-0.050, -0.009, 0.105)
+[ee_pose_in_base-1] [INFO] [1747308966.747649947] [moveit_cpp]: 🦾 In EE:     (-0.090, 0.026, -0.065)
+[ee_pose_in_base-1] [INFO] [1747308966.747668082] [moveit_cpp]: 🏁 In Base:   (-0.091, 0.219, 0.159)
+[ee_pose_in_base-1] [INFO] [1747308966.747684739] [moveit_cpp]: Camera to base: x=-0.041 y=0.228 z=0.160
+[ee_pose_in_base-1] [INFO] [1747308966.747700169] [moveit_cpp]: ee_in_base: x=-0.001 y=0.188 z=0.222
+[ee_pose_in_base-1] [INFO] [1747308966.747715840] [moveit_cpp]: 🟩 HIGH-LEFT → dx=0.205 dy=0.208
+[ee_pose_in_base-1] [INFO] [1747308966.747729630] [moveit_cpp]: Converted Pose:
+
+
+

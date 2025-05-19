@@ -1,0 +1,24 @@
+[1.312s] Invoking command in '/home/open/work/motor_control/src/core': PYTHONPATH=/home/open/work/build/core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/open/work/install/core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/core build --build-base /home/open/work/build/core/build install --record /home/open/work/build/core/install.log --single-version-externally-managed install_data
+[1.559s] running egg_info
+[1.560s] writing ../../../build/core/core.egg-info/PKG-INFO
+[1.561s] writing dependency_links to ../../../build/core/core.egg-info/dependency_links.txt
+[1.561s] writing entry points to ../../../build/core/core.egg-info/entry_points.txt
+[1.561s] writing requirements to ../../../build/core/core.egg-info/requires.txt
+[1.561s] writing top-level names to ../../../build/core/core.egg-info/top_level.txt
+[1.563s] reading manifest file '../../../build/core/core.egg-info/SOURCES.txt'
+[1.564s] writing manifest file '../../../build/core/core.egg-info/SOURCES.txt'
+[1.564s] running build
+[1.564s] running build_py
+[1.565s] copying core/task_master.py -> /home/open/work/build/core/build/lib/core
+[1.565s] running install
+[1.565s] running install_lib
+[1.566s] copying /home/open/work/build/core/build/lib/core/task_master.py -> /home/open/work/install/core/lib/python3.10/site-packages/core
+[1.567s] byte-compiling /home/open/work/install/core/lib/python3.10/site-packages/core/task_master.py to task_master.cpython-310.pyc
+[1.569s] running install_data
+[1.569s] running install_egg_info
+[1.574s] removing '/home/open/work/install/core/lib/python3.10/site-packages/core-0.0.0-py3.10.egg-info' (and everything under it)
+[1.574s] Copying ../../../build/core/core.egg-info to /home/open/work/install/core/lib/python3.10/site-packages/core-0.0.0-py3.10.egg-info
+[1.574s] running install_scripts
+[1.597s] Installing task_master script to /home/open/work/install/core/lib/core
+[1.597s] writing list of installed files to '/home/open/work/build/core/install.log'
+[1.627s] Invoked command in '/home/open/work/motor_control/src/core' returned '0': PYTHONPATH=/home/open/work/build/core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/open/work/install/core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/core build --build-base /home/open/work/build/core/build install --record /home/open/work/build/core/install.log --single-version-externally-managed install_data

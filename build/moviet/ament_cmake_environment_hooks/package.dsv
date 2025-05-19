@@ -1,0 +1,4 @@
+source;share/moviet/local_setup.bash
+source;share/moviet/local_setup.dsv
+source;share/moviet/local_setup.sh
+source;share/moviet/local_setup.zsh

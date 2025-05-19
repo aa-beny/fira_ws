@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-d5208ac75cf62efef0f5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "small_arm_moveit_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "auto_pose_goal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-auto_pose_goal-2cced5d3ae00be4f1eb2.json",
+					"name" : "auto_pose_goal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ee_pose_in_base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ee_pose_in_base-3f3e435720484384bf1c.json",
+					"name" : "ee_pose_in_base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eye_hand_pose::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eye_hand_pose-5109a78daf1240945881.json",
+					"name" : "eye_hand_pose",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gripper_joint_value::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gripper_joint_value-0057acf57dc9414c7149.json",
+					"name" : "gripper_joint_value",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "named_goal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-named_goal-ce8d45750887be05c9b1.json",
+					"name" : "named_goal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "small_arm_moveit_cpp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-small_arm_moveit_cpp_uninstall-8ec3f37c6ce294528b8f.json",
+					"name" : "small_arm_moveit_cpp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-57d127afad8ef660a4e7.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/open/work/build/small_arm_moveit_cpp",
+		"source" : "/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

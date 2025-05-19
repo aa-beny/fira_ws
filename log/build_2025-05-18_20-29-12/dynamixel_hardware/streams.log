@@ -1,0 +1,83 @@
+[0.012s] Invoking command in '/home/open/work/build/dynamixel_hardware': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/python_moveit2:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake /home/open/work/motor_control/src/tb4_arm_ros2/dynamixel_hardware -DCMAKE_INSTALL_PREFIX=/home/open/work/install/dynamixel_hardware
+[0.055s] -- The C compiler identification is GNU 11.4.0
+[0.106s] -- The CXX compiler identification is GNU 11.4.0
+[0.112s] -- Detecting C compiler ABI info
+[0.164s] -- Detecting C compiler ABI info - done
+[0.173s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.174s] -- Detecting C compile features
+[0.174s] -- Detecting C compile features - done
+[0.178s] -- Detecting CXX compiler ABI info
+[0.239s] -- Detecting CXX compiler ABI info - done
+[0.249s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.249s] -- Detecting CXX compile features
+[0.250s] -- Detecting CXX compile features - done
+[0.254s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.412s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.531s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.573s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.582s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.591s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.603s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.618s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.661s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.664s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.684s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.695s] -- Looking for pthread.h
+[0.757s] -- Looking for pthread.h - found
+[0.757s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.828s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.829s] -- Found Threads: TRUE  
+[0.883s] -- Found rclcpp_lifecycle: 16.0.12 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.905s] -- Found hardware_interface: 2.50.0 (/opt/ros/humble/share/hardware_interface/cmake)
+[1.039s] -- Found dynamixel_workbench_toolbox: 2.2.3 (/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/cmake)
+[1.055s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.151s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.153s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.153s] -- Configured cppcheck include dirs: /home/open/work/motor_control/src/tb4_arm_ros2/dynamixel_hardware/include
+[1.153s] -- Configured cppcheck exclude dirs and/or files: 
+[1.154s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.154s] -- Configured cpplint exclude dirs and/or files: 
+[1.155s] -- Added test 'lint_cmake' to check CMake code style
+[1.156s] -- Added test 'uncrustify' to check C / C++ code style
+[1.156s] -- Configured uncrustify additional arguments: 
+[1.156s] -- Added test 'xmllint' to check XML markup files
+[1.159s] -- Configuring done
+[1.192s] -- Generating done
+[1.198s] -- Build files have been written to: /home/open/work/build/dynamixel_hardware
+[1.209s] Invoked command in '/home/open/work/build/dynamixel_hardware' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/python_moveit2:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake /home/open/work/motor_control/src/tb4_arm_ros2/dynamixel_hardware -DCMAKE_INSTALL_PREFIX=/home/open/work/install/dynamixel_hardware
+[1.211s] Invoking command in '/home/open/work/build/dynamixel_hardware': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/python_moveit2:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --build /home/open/work/build/dynamixel_hardware -- -j16 -l16
+[1.266s] [ 50%] [32mBuilding CXX object CMakeFiles/dynamixel_hardware.dir/src/dynamixel_hardware.cpp.o[0m
+[8.262s] [100%] [32m[1mLinking CXX shared library libdynamixel_hardware.so[0m
+[8.713s] [100%] Built target dynamixel_hardware
+[8.767s] Invoked command in '/home/open/work/build/dynamixel_hardware' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/python_moveit2:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --build /home/open/work/build/dynamixel_hardware -- -j16 -l16
+[8.768s] Invoking command in '/home/open/work/build/dynamixel_hardware': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/python_moveit2:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --install /home/open/work/build/dynamixel_hardware
+[8.790s] -- Install configuration: ""
+[8.790s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/dynamixel_hardware.xml
+[8.796s] -- Installing: /home/open/work/install/dynamixel_hardware/lib/libdynamixel_hardware.so
+[8.796s] -- Set runtime path of "/home/open/work/install/dynamixel_hardware/lib/libdynamixel_hardware.so" to ""
+[8.799s] -- Installing: /home/open/work/install/dynamixel_hardware/include
+[8.800s] -- Installing: /home/open/work/install/dynamixel_hardware/include/dynamixel_hardware
+[8.800s] -- Installing: /home/open/work/install/dynamixel_hardware/include/dynamixel_hardware/visiblity_control.h
+[8.800s] -- Installing: /home/open/work/install/dynamixel_hardware/include/dynamixel_hardware/dynamixel_hardware.hpp
+[8.802s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/environment/library_path.sh
+[8.802s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/environment/library_path.dsv
+[8.802s] -- Installing: /home/open/work/install/dynamixel_hardware/share/ament_index/resource_index/package_run_dependencies/dynamixel_hardware
+[8.802s] -- Installing: /home/open/work/install/dynamixel_hardware/share/ament_index/resource_index/parent_prefix_path/dynamixel_hardware
+[8.807s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/environment/ament_prefix_path.sh
+[8.807s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/environment/ament_prefix_path.dsv
+[8.810s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/environment/path.sh
+[8.810s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/environment/path.dsv
+[8.810s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/local_setup.bash
+[8.810s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/local_setup.sh
+[8.810s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/local_setup.zsh
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/local_setup.dsv
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.dsv
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/ament_index/resource_index/packages/dynamixel_hardware
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/dynamixel_hardware
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/cmake/ament_cmake_export_libraries-extras.cmake
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.811s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/cmake/dynamixel_hardwareConfig.cmake
+[8.812s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/cmake/dynamixel_hardwareConfig-version.cmake
+[8.812s] -- Installing: /home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.xml
+[8.825s] Invoked command in '/home/open/work/build/dynamixel_hardware' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/python_moveit2:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --install /home/open/work/build/dynamixel_hardware

@@ -1,0 +1,91 @@
+#environment setting
+vcs import src < src/tb4_arm_ros2/dynamixel_control.repos
+rosdep udpate
+sudo apt update
+rosdep install --from-paths src --ignore-src -r -y
+
+
+#visual
+
+#color_detect
+ros2 run realsense color_range
+
+#text_detect
+ros2 run realsense realsense_read
+ros2 run realsense paddleorc
+ros2 run realsense depth_calculate
+
+#open all visual package
+ros2 launch realsense visual_realsense.py
+
+
+-----------------------------------------
+
+#arm control
+
+#moveit2 server
+ros2 launch small_arm_moveit_config 
+
+#arm launch control(neccessary)
+ros2 launch small_arm_moveit_cpp 
+
+#single node open
+ros2 run small_arm_moveit_cpp gripper_joint_value.cpp	#control grip open and close(untest before)
+ros2 run small_arm_moveit_cpp auto_pose_goal.cpp	#sub the ee point and move
+因為這段程式的控制目標是透過 Pose（位置 + 姿態）控制機器人手臂末端執行器（End Effector）的空間目標，這行設定了末端執行器要「到哪個位置」，然後由 MoveIt 進行 逆向運動學（IK） 計算，自動找出一組關節角度（joint values）來達成這個姿態。
+
+✅ 所以你不用手動設定 joint 角度，MoveIt 幫你算。
+訂閱一個名為 /target_pose_in_base 的 topic，型態為 Pose，當有訊息進來時會呼叫 cmdCallback() 函式
+small_arm 是你在 MoveIt 裡定義的 move group 名稱
+
+這個物件會用來控制機器手臂
+接收到的是一個 Pose，MoveIt 會自動做 IK 計算
+嘗試建立一條路徑，如果成功，就執行它
+成功與否都會送一個 status 到 pose_goal_status topic
+
+
+
+ros2 run small_arm_moveit_cpp name_goal.cpp		#go to setting named_state,need go to moveit assistent or srdf add pose
+
+
+ros2 run small_arm_moveit_cpp ee_pose_in_base.cpp	#tf camera to base link 
+這個變換的用途是：
+
+📌 把「相機看到的點」，轉換到「機械臂的末端」的座標系下，這樣才能再進一步轉換到 base_link 或控制點。
+
+這樣才能讓機械臂精準地去抓住「相機看到」的東西，因為相機看到的資料是相對於 camera frame 的，但機械臂的控制通常要 base_link frame 下的位置。
+最基本的方式就是你拿卡尺或尺量相機與機械臂末端之間的相對位置，例如：
+
+相機鏡頭中心點距離末端工具中心點的 x, y, z（例如：前方 5.3 公分，左邊 8 公分，下方 60 公分）
+
+然後你假設相機沒有轉動（或者小角度可忽略），用單位四元數 {0, 0, 0, 1}。
+
+📌 這就是你現在的例子：{-0.053, 0.08, -0.6} 和 {0, 0, 0, 1}。
+📌 從相機偵測到的點，經過 Camera → End Effector → Base Link 的轉換後，得到該點在機器人 base 座標系下的位置，並將其發佈出來。
+RCLCPP_INFO(this->get_logger(),
+        "📌 Publish base_link coordinate: x=%.3f y=%.3f z=%.3f",
+        point_in_base.x(), point_in_base.y(), point_in_base.z());
+📥 訂閱 /text_coordinate
+cpp
+Copy
+Edit
+subscription_ = this->create_subscription<geometry_msgs::msg::Pose>(
+  "/text_coordinate", 10,
+  std::bind(&CameraToBasePrinter::callback, this, std::placeholders::_1)
+);
+這裡會接收從相機偵測到的一個目標點（例如文字的 3D 位置），資料格式是 Pose（位置＋方向），但這邊只用到了 position。
+
+📤 發佈 /target_pose_in_base
+cpp
+Copy
+Edit
+publisher_ = this->create_publisher<geometry_msgs::msg::Pose>("/target_pose_in_base", 10);
+轉換完成後，會把這個點在 base_link 座標系下的 Pose 發佈出去，可以被其他節點使用（例如控制機械臂去抓東西）
+
+
+#pub the ee point once
+ros2 topic pub --once /pose_goal_position geometry_msgs/msg/Pose "{position: {x: -0.061, y: 0.287, z: 0.030}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}"
+ x=1.099 y=-1.128 z=1.111
+
+ros2 topic pub --once /pose_goal_position geometry_msgs/msg/Pose \
+"{position: {x: 1.099, y: -1.128, z: 1.111}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}"
