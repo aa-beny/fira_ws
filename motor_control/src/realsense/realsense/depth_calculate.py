@@ -151,8 +151,8 @@ print("🔥 正在執行新版 depth_calculate.py")
 class RGBPixelTo3D(Node):
     def __init__(self):
         super().__init__('rgb_pixel_to_3d_node')  # 初始化 ROS 節點
-        # self.text_sub = self.create_subscription(String, '/ocr_results', self.text_callback, 10)  # 訂閱 OCR 偵測結果
-        self.text_sub = self.create_subscription(String, '/target_ocr', self.text_callback, 10)  # 訂閱 OCR 偵測結果
+        self.text_sub = self.create_subscription(String, '/ocr_results', self.text_callback, 10)  # 訂閱 OCR 偵測結果
+        # self.text_sub = self.create_subscription(String, '/target_ocr', self.text_callback, 10)  # 訂閱 OCR 偵測結果
         self.depth_sub = self.create_subscription(Image, '/camera/depth', self.depth_callback, 10)  # 訂閱深度圖像
         self.pose_pub = self.create_publisher(Pose, '/text_coordinate', 10)  # 發布 3D 位置給手臂用
 
@@ -182,6 +182,9 @@ class RGBPixelTo3D(Node):
         # init 時加：
         self.last_text_time = self.get_clock().now()
         self.keep_text_seconds = 0.3  # OCR 有效保留 0.3 秒
+
+        self.waiting_count = 0  # 追蹤 pose 連續跳動的次數
+        self.max_waiting_limit = 8  # 超過幾次就強制清空
         
     def allow_pub_callback(self, msg):
         self.allow_pub = msg.data
@@ -293,6 +296,7 @@ class RGBPixelTo3D(Node):
 
 
         current_z = np.mean(region_depths)
+        # current_z = np.median(region_depths)
         
 
         # === 中位數過濾機制 ===＝＝＝＝＝＝＝＝＝＝＝
@@ -312,16 +316,49 @@ class RGBPixelTo3D(Node):
             self.get_logger().warn(f"⚠️ avg_z={self.avg_z:.3f} out of range — skipping")
             return
         # 根據深度分類高度
-        if 0.33 < self.avg_z < 0.38:
-            self.target_z = 0.01  # 高的盒子
-            self.get_logger().info("Height: LOW")
-        elif 0.29 < self.avg_z < 0.33:
-            # self.target_z = 0.06  # 中等高度
-            self.target_z = 0.058  # 中等高度
+        # if 0.33 < self.avg_z < 0.38:
+        #     self.target_z = 0.01  
+        #     self.get_logger().info("Height: LOW")
+        # elif 0.29 < self.avg_z < 0.33:
+        #     # self.target_z = 0.06  # 中等高度
+        #     self.target_z = 0.058  
+        #     self.get_logger().info("Height: MID")
+        # else:
+        #     self.target_z = 0.105  
+        #     self.get_logger().info("Height: HIGH")
+
+        # if 0.31 < self.avg_z < 0.38: # 0.338 0.339 0.319
+        #     self.target_z = 0.01  
+        #     self.get_logger().info("Height: LOW")
+        # elif 0.28 < self.avg_z < 0.31:
+        #     # self.target_z = 0.06  # 中等高度0.297  0.368 0.367  0.38 0.336
+        #     self.target_z = 0.058  
+        #     self.get_logger().info("Height: MID")
+        # else:
+        #     self.target_z = 0.105   # 中0.553
+        #     self.get_logger().info("Height: HIGH")
+
+        # if 0.31 < self.avg_z < 0.38: # 0.338 0.339 0.319
+        #     self.target_z = 0.01  
+        #     self.get_logger().info("Height: LOW")
+        # elif 0.28 < self.avg_z < 0.31:
+        #     # self.target_z = 0.06  # 中等高度0.297  0.368 0.367  0.38 0.336
+        #     self.target_z = 0.058  
+        #     self.get_logger().info("Height: MID")
+        # else:
+        #     self.target_z = 0.105   # 中0.553
+        #     self.get_logger().info("Height: HIGH")
+
+        if self.avg_z < 0.29:
+            self.target_z = 0.105  # HIGH
+            self.get_logger().info("Height: HIGH")
+        elif self.avg_z < 0.37:
+            self.target_z = 0.058  # MID
             self.get_logger().info("Height: MID")
         else:
-            self.target_z = 0.105  # 低盒子或物體
-            self.get_logger().info("Height: HIGH")
+            self.target_z = 0.01   # LOW
+            self.get_logger().info("Height: LOW")
+        
 
         result = self.ransac_plane_fit(np.array(points))
         if result is None:
@@ -394,11 +431,20 @@ class RGBPixelTo3D(Node):
                     if dx < 0.04 and dy < 0.04 and dz < 0.04:
                         self.pose_buffer.append((pose.position.x, pose.position.y, pose.position.z))
                         self.last_3d_pose = pose  # ✅ 只有成功加入 buffer 才更新
+
+                        self.waiting_count = 0  # ✅ 成功就清空計數
                     else:
                         self.get_logger().warn(f"❌ Pose jump too large — dx={dx:.3f}, dy={dy:.3f}, dz={dz:.3f}")
+                        self.waiting_count += 1
+                        if self.waiting_count > self.max_waiting_limit:
+                            self.get_logger().warn("⚠️ Waiting too long with unstable poses — reset last_3d_pose.")
+                            self.last_3d_pose = None
+                            self.waiting_count = 0  # ✅ 清空讓下次重新開始
                 else:
                     self.pose_buffer.append((pose.position.x, pose.position.y, pose.position.z))
                     self.last_3d_pose = pose  # ✅ 第一次直接設定
+                    
+                    self.waiting_count = 0  # 第一次就直接重設
 
                 # 發送條件
                 if len(self.pose_buffer) >= 10:

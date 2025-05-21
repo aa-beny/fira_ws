@@ -1,0 +1,74 @@
+開docker
+docker start -ai fira
+權限
+sudo chmod 777 /dev/ttyUSB0
+開moviet控制手臂
+ros2 launch small_arm_moveit_config real_demo.launch.py
+------------------------------------------------------------
+相機：
+讀色彩
+ros2 run realsense color_range
+開相機
+ros2 run realsense realsense_read
+辨識
+ros2 run realsense paddleorc
+二維轉三維
+ros2 run realsense depth_calculate
+------------------------------------------------------------
+手臂：
+相機轉手臂座標
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py cpp_node:=ee_pose_in_base
+控制夾爪
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py cpp_node:=gripper_joint_value
+讓手臂到點
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py
+------------------------------------------------------------
+topic 功能：
+允許發作標到物體點
+ros2 topic pub --once /allow_publish_pose std_msgs/Bool "data: true"
+
+
+回到到拍照點
+ros2 topic pub --once /do_detect_fira std_msgs/Bool "data: true"
+停10秒再發座標
+做完要false reset一下
+ros2 topic pub --once /do_detect_fira std_msgs/Bool "data: false"
+
+車子到達
+ros2 topic pub --once /car_arrived std_msgs/Bool "data: true"
+
+夾爪放開
+ros2 topic pub --once /gripper_command std_msgs/msg/Bool "data: true"
+夾爪夾
+ros2 topic pub --once /gripper_command std_msgs/msg/Bool "data: false"
+------------------------------------------------------------
+可能會用到：
+開巫師設定點位
+ros2 launch moveit_setup_assistant setup_assistant.launch.py
+
+匯入套件並安裝依賴：
+
+cd motor_control/
+
+vcs import src < src/tb4_arm_ros2/dynamixel_control.repos
+rosdep update
+sudo apt update
+
+setup----------------------------------------------------------------------------
+cd tb4_ws/
+cd motor_control/
+sudo apt update
+vcs import src < src/tb4_arm_ros2/dynamixel_control.repos
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+# 刪除先前編譯留下的中間資料
+rm -rf build install log
+
+# 再重新 build
+colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+nvidia-smi
+python3 -c "import paddle; print(paddle.__version__)"
+rosdep install --from-paths src --ignore-src -r -y

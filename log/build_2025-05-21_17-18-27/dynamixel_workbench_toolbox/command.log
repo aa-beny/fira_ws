@@ -1,0 +1,4 @@
+Invoking command in '/home/open/work/build/dynamixel_workbench_toolbox': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_toolbox -- -j16 -l16
+Invoked command in '/home/open/work/build/dynamixel_workbench_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_toolbox -- -j16 -l16
+Invoking command in '/home/open/work/build/dynamixel_workbench_toolbox': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_toolbox
+Invoked command in '/home/open/work/build/dynamixel_workbench_toolbox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_toolbox

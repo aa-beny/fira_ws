@@ -94,7 +94,8 @@ public:
     : Node("pose_goal_node"),
       logger_(this->get_logger())
     {
-        publisher_ = this->create_publisher<std_msgs::msg::String>("pose_goal_status", 10);
+        publisher_ = this->create_publisher<std_msgs::msg::Bool>("pose_goal_status", 10);
+        
 
         subscriber_ = this->create_subscription<geometry_msgs::msg::Pose>(
             "/target_pose_in_base", 10,
@@ -128,22 +129,29 @@ void trigger_callback(const std_msgs::msg::Bool::SharedPtr msg)
         }
 
         RCLCPP_INFO(this->get_logger(), "🟢 Received TRUE → Moving to detect_fira");
-        move_group_interface_->setNamedTarget("detect_fira");
+        // move_group_interface_->setNamedTarget("detect_fira");
+        move_group_interface_->setNamedTarget("home");
 
         // 建議先嘗試規劃再執行
         moveit::planning_interface::MoveGroupInterface::Plan my_plan;
         bool success = (move_group_interface_->plan(my_plan) == moveit::core::MoveItErrorCode::SUCCESS);
-
+        
+        // std_msgs::msg::String status_msg;
+        std_msgs::msg::Bool status_msg;
         if (success)
         {
             move_group_interface_->execute(my_plan);
             RCLCPP_INFO(this->get_logger(), "✅ Executed detect_fira.");
+            status_msg.data = true;
         }
         else
         {
             RCLCPP_ERROR(this->get_logger(), "❌ Planning to detect_fira failed.");
+            status_msg.data = false;
         }
 
+        // publisher_->publish(status_msg);
+        // RCLCPP_INFO(this->get_logger(), "📤 Published pose status: %s", success ? "True" : "False");
         trigger_enabled_ = false;
         RCLCPP_INFO(this->get_logger(), "📴 Auto-reset disabled until next TRUE");
     }
@@ -176,20 +184,23 @@ private:
         moveit::planning_interface::MoveGroupInterface::Plan my_plan;
         bool success = (move_group_interface_->plan(my_plan) == moveit::core::MoveItErrorCode::SUCCESS);
 
-        std_msgs::msg::String status_msg;
+        // std_msgs::msg::String status_msg;
+        std_msgs::msg::Bool status_msg;
         if (success)
         {
             RCLCPP_INFO(logger_, "[MoveIt] Plan success. Executing...");
             move_group_interface_->execute(my_plan);
-            status_msg.data = "[PUB] Work success.";
+            status_msg.data = true;
         }
         else
         {
             RCLCPP_ERROR(logger_, "[MoveIt] Plan failed.");
-            status_msg.data = "[PUB] Plan failed.";
+            status_msg.data = false;
         }
 
         publisher_->publish(status_msg);
+        RCLCPP_INFO(this->get_logger(), "📤 Published pose status: %s", success ? "True" : "False");
+
     }
 
     void checkTimeout()
@@ -202,14 +213,17 @@ private:
                 move_group_interface_->stop();  // ✅ 停止手臂
                 RCLCPP_WARN(this->get_logger(), "[Timeout] No new target pose. Stopping the robot.");
 
-                std_msgs::msg::String status_msg;
-                status_msg.data = "[PUB] Stopped due to timeout.";
-                publisher_->publish(status_msg);
+                // std_msgs::msg::String status_msg;
+                // std_msgs::msg::Bool status_msg;
+                // status_msg.data = false;
+                // publisher_->publish(status_msg);
+                // RCLCPP_INFO(this->get_logger(), "📤 Published pose status: %s", success ? "True" : "False");
             }
         }
     }
 
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+    // rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr publisher_;
     rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr subscriber_;
 
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr trigger_sub_;

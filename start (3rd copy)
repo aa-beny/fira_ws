@@ -1,0 +1,76 @@
+setup----------------
+cd tb4_ws/
+cd motor_control/
+sudo apt update
+vcs import src < src/tb4_arm_ros2/dynamixel_control.repos
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+. install/setup.bash
+sudo chmod 777 /dev/ttyUSB0
+nvidia-smi
+python3 -c "import paddle; print(paddle.__version__)"
+假設您在終端機中執行 lspci | grep -i nvidia 後看到 NVIDIA Corporation GA107M [GeForce RTX 3050 Ti Mobile]，並且執行 lsb_release -a 後看到您的發行版是 Ubuntu 22.04 LTS。
+
+# 刪除先前編譯留下的中間資料
+rm -rf build install log
+
+# 再重新 build
+colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+-------------------------------------
+開控制界面
+
+ros2 launch small_arm_moveit_config real_demo.launch.py
+------------------------------
+開巫師設定點位
+ros2 launch moveit_setup_assistant setup_assistant.launch.py
+-----------------------------------------------------------
+到點程式
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py cpp_node:=pose_goal
+
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py cpp_node:=ee_pose_in_base
+
+ros2 launch small_arm_moveit_cpp motion_planning.launch.py cpp_node
+要開demo
+ros2 topic pub --once /pose_goal_position geometry_msgs/msg/Pose \
+"{position: {x: -0.061, y: 0.287, z: 0.030}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}"
+
+啟動ros2_controlOpenManipulator-X 管理器。
+
+$ ros2 launch small_arm_description small_arm.launch.py
+2 號航廈
+啟動joint_trajectory_controller並發送/joint_trajectory_controller/follow_joint_trajectory目標來移動small_arm。
+
+$ ros2 control switch_controllers --activate joint_state_broadcaster --activate joint_trajectory_controller --deactivate velocity_controller
+
+
+啟動 joint_state_broadcaster：這是用來廣播機器人各關節的狀態信息，這些信息會被用來更新機器人模型的狀態，並且被 robot_state_publisher 使用。
+啟動 joint_trajectory_controller：這是負責控制機器人關節運動的控制器，它會接收一組關節目標並計算適當的運動，將機器人從當前狀態移動到目標狀態。
+停用 velocity_controller：這個控制器通常用來基於速度控制機器人，這裡指令中將其停用，意味著不再使用基於速度的控制方法。
+$ ros2 action send_goal /joint_trajectory_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory -f "{
+  trajectory: {
+    joint_names: [joint1, joint2, joint3, joint4, joint5, joint6],
+    points: [
+      { positions: [0.1, 0.1, 0.1, 0.1, 0.1, 0.1], time_from_start: { sec: 2 } },
+      { positions: [-0.1, -0.1, -0.1, -0.1, 0.1, 0], time_from_start: { sec: 4 } },
+      { positions: [0, 0, 0, 0, 0, 0], time_from_start: { sec: 6 } }
+    ]
+  }
+}"
+
+ros2 action send_goal /joint_trajectory_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory -f "{
+  trajectory: {
+    joint_names: [joint1, joint2, joint3, joint4, joint5, joint6],
+    points: [
+
+      { positions: [0, -0.227, 0.506, 0, -0.140, 0], time_from_start: { sec: 2 } },
+       { positions: [0, 1.588, -0.803, 0.017, 0.262, 0.035], time_from_start: { sec: 4 } }
+
+    ]
+  }
+}"
+如果您想使用速度控制，請切換到velocity_controller並發布/velocity_controller/commands訊息來移動小臂。
+
+$ ros2 control switch_controllers --activate joint_state_broadcaster --deactivate joint_trajectory_controller --activate velocity_controller
+$ ros2 topic pub /velocity_controller/commands std_msgs/msg/Float64MultiArray "data: [0.1, 0.1, 0.1, 0.1, 0]"

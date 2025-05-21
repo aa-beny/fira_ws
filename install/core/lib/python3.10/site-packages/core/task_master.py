@@ -16,7 +16,8 @@ class TaskMaster(Node):
         self.create_subscription(Bool, '/car_arrived', self.car_arrived_callback, 10)
         # 訂閱 OCR 模組辨識到的文字訊息（例如 "F,512,384;I,200,300"）
         self.create_subscription(String, '/ocr_results', self.ocr_callback, 10)
-
+        self.create_subscription(Bool, '/pose_goal_status', self.pose_status_callback, 10)
+        self.pose_done = False
         # 建立可以發送的 ROS 主題
         self.allow_pub = self.create_publisher(Bool, '/allow_publish_pose', 10)  # 發布是否允許 depth 模組發布座標
         self.detect_fira = self.create_publisher(Bool, '/do_detect_fira', 10)  # 通知手臂回到拍照位置
@@ -29,7 +30,11 @@ class TaskMaster(Node):
         self.car_arrived_for_drop = False  # 記錄車子是否已經抵達放置區
         self.allow_pose_disabled_for_drop = False  # 確保放置階段的 allow_pose 只發一次
 
+        self.pose_resend_timer = self.create_timer(0.2, self.pose_timer_callback)
+
         self.get_logger().info('✅ Task Master node initialized')  # 印出初始化完成訊息
+
+        self.waiting_for_pose = False  # ➕ 加這個
 
         # 開始執行主迴圈，這是一個背景執行緒，每 0.2 秒執行一次
         threading.Thread(target=self.main_loop, daemon=True).start()
@@ -40,12 +45,18 @@ class TaskMaster(Node):
             self.get_logger().info('🚗 [CALLBACK] Car arrived at PICK zone → switching to PICK_MODE')
 
             self.allow_pose_disabled_for_drop = False  # 重設旗標以允許新的 pose 發布
+            self.send_gripper(True)
             self.state = 'PICK_MODE'  # 進入抓取階段
+
+            self.pose_done = False
+
         elif self.state == 'DROP_MODE':  # 如果現在是放置階段且車子到了
             self.get_logger().info('🚗 [CALLBACK] Car arrived at DROP zone → ready to place object')
 
             self.allow_pose_disabled_for_drop = False
             self.car_arrived_for_drop = True  # 標記已到達放置區
+
+            self.pose_done = False
 
     # OCR 模組辨識出文字後會進入這個函式
     def ocr_callback(self, msg):
@@ -68,13 +79,25 @@ class TaskMaster(Node):
                 self.get_logger().info(f"🔍 [PICK] Selected letter: {self.current_letter} → sending pose request + waiting to grab")
 
                 self.ocr_target_pub.publish(String(data=selected))  # 把該目標發給 depth node 處理座標
-                self.allow_pub.publish(Bool(data=True))  # 通知 depth node 可以發布座標了
-                time.sleep(3.5)  # 等待手臂完成動作
-                self.send_gripper(True)  # 發送夾取指令
-                self.move_to_photo_pose()  # 讓手臂回到拍照點
-                self.get_logger().info('🔁 Returned to photo position, sending car to drop zone')
-                self.car_to_drop.publish(Bool(data=True))  # 通知車子去放置區
-                self.state = 'DROP_MODE'  # 切換狀態為放置模式
+                # self.allow_pub.publish(Bool(data=True))  # 通知 depth node 可以發布座標了
+                if not self.allow_pose_disabled_for_drop:
+                    self.allow_pub.publish(Bool(data=True))  # 通知 depth node 可以發布座標了
+                    self.allow_pose_disabled_for_drop = True  # 標記已發送過
+                # time.sleep(3.5)  # 等待手臂完成動作
+
+                # while not self.pose_done and rclpy.ok():
+                if not self.pose_done:
+                    self.get_logger().info("⏳ pick Waiting for arm to complete motion...")
+                    self.ocr_target_pub.publish(String(data=selected))  # 把該目標發給 depth node 處理座標
+                    # time.sleep(0.2)
+                # else:
+                #     self.pose_done = False  # reset for next action
+
+                #     self.send_gripper(False)  # 發送夾取指令
+                #     self.move_to_photo_pose()  # 讓手臂回到拍照點
+                #     self.get_logger().info('🔁 Returned to photo position, sending car to drop zone')
+                #     self.car_to_drop.publish(Bool(data=True))  # 通知車子去放置區
+                #     self.state = 'DROP_MODE'  # 切換狀態為放置模式
 
         # 如果是放置階段，並且有字母要處理
                 # 如果目前是在放置階段，並且已經有記錄手上夾的是哪一個字母（self.current_letter）
@@ -110,22 +133,32 @@ class TaskMaster(Node):
                 # 顯示我們目前要放哪個字母、準備對準其位置
                 self.get_logger().info(f"[DROP] Selected letter '{self.current_letter}' for placement at pixel ({u}, {v})")
                 # 發布給 depth 模組，請它針對這個像素位置發出 3D 座標
-                self.ocr_target_pub.publish(String(data=target_msg))  # 發送該字母位置給 depth node
+               
                 if not self.allow_pose_disabled_for_drop:
                     self.allow_pub.publish(Bool(data=True))  # 通知 depth node 可以發布座標了
                     self.allow_pose_disabled_for_drop = True  # 標記已發送過
 
                 self.get_logger().info("⏳ Waiting for arm to place object...")
-                time.sleep(3.5)  # 等手臂放置動作完成
-                self.send_gripper(False)  # 發送放開指令
-                self.get_logger().info(f'✅ Successfully placed [{self.current_letter}]')
-                self.move_to_photo_pose()  # 回拍照點
-                self.processed_letters.add(self.current_letter)  # 標記該字母已處理
-                self.current_letter = None
+                # time.sleep(3.5)  # 等手臂放置動作完成
+                self.ocr_target_pub.publish(String(data=target_msg))
+                # while not self.pose_done and rclpy.ok():
+                if not self.pose_done:
+                    self.ocr_target_pub.publish(String(data=target_msg))  # 發送該字母位置給 depth node
+                    self.get_logger().info("⏳ DROP Waiting for arm to complete motion...")
+                    # time.sleep(0.2)
+                # else:
+                #     self.pose_done = False  # reset for next action
 
-                self.car_arrived_for_drop = False
 
-                self.state = 'WAIT_FOR_CAR'  # 回到等待車子階段
+                #     self.send_gripper(True)  # 發送放開指令
+                #     self.get_logger().info(f'✅ Successfully placed [{self.current_letter}]')
+                #     self.move_to_photo_pose()  # 回拍照點
+                #     self.processed_letters.add(self.current_letter)  # 標記該字母已處理
+                #     self.current_letter = None
+
+                #     self.car_arrived_for_drop = False
+
+                #     self.state = 'WAIT_FOR_CAR'  # 回到等待車子階段
             else:
                 self.get_logger().warn(f"⚠️ [DROP] Could not find letter {self.current_letter}")
 
@@ -133,18 +166,55 @@ class TaskMaster(Node):
     def move_to_photo_pose(self):
         self.get_logger().info("📸 Returning to photo pose")
         self.detect_fira.publish(Bool(data=True))
-        time.sleep(1.5)
+        time.sleep(10)
+
+        # while not self.pose_done and rclpy.ok():
+        #     self.get_logger().info("⏳ photo_pose Waiting for arm to complete motion...")
+        #     time.sleep(0.2)
+        # self.pose_done = False  # reset for next action
+
         self.detect_fira.publish(Bool(data=False))
 
-    # 發送夾爪控制指令（True 代表夾住，False 代表放開）
+    # 發送夾爪控制指令（False 代表夾住，True 代表放開）
         # This function sends a gripper command to either grab or release an object
-        # 發送控制夾爪的指令（True 表示夾取，False 表示放開）
+        # 發送控制夾爪的指令（False表示夾取，True表示放開）
     def send_gripper(self, close):
         action = "GRAB" if close else "RELEASE"  # 根據輸入的布林值決定動作名稱（英文顯示）
         self.get_logger().info(f"[GRIPPER] Executing action: {action}")  # 印出目前正在執行的夾爪動作
         self.gripper_cmd.publish(Bool(data=close))  # 將指令發送給 /gripper_command 主題
         self.get_logger().debug(f"[GRIPPER] Bool message published: {close}")  # 除錯用，確認傳出的布林值
         time.sleep(1.5)  # 暫停 1.5 秒，給夾爪執行時間  # Wait to allow gripper hardware time to finish moving
+
+    def pose_status_callback(self, msg):
+        self.get_logger().info(f"📬 Received pose_goal_status: {msg.data}")  # 加這行
+        # if msg.data == "[POSE_GOAL] Success":
+        if msg.data:
+            self.get_logger().info("🟢 Arm reported success")
+            self.pose_done = True
+            self.waiting_for_pose = False  # ➕ 當任務成功，清除等待狀態
+            if self.state == 'PICK_MODE':
+                self.send_gripper(False)  # 夾住
+                self.move_to_photo_pose()  # 回拍照點
+                self.get_logger().info('🔁 Returned to photo position, sending car to drop zone')
+                self.car_to_drop.publish(Bool(data=True))  # 通知車子去放置區
+                self.state = 'DROP_MODE'  # 切換到放置階段
+
+            elif self.state == 'DROP_MODE':
+                self.send_gripper(True)  # 放開
+                self.get_logger().info(f'✅ Successfully placed [{self.current_letter}]')
+                self.move_to_photo_pose()  # 回拍照點
+                self.processed_letters.add(self.current_letter)  # 標記已處理
+                self.current_letter = None
+                self.car_arrived_for_drop = False
+                self.state = 'WAIT_FOR_CAR'  # 回到等車階段
+            # elif msg.data == "[POSE_GOAL] Failed":
+        else:
+            self.get_logger().warn("🔴 Arm reported failure")
+            self.pose_done = False
+    def pose_timer_callback(self):
+        if self.waiting_for_pose and self.last_target_msg:
+            self.get_logger().info("🔁 Resending target while waiting for pose done...")
+            self.ocr_target_pub.publish(self.last_target_msg)
 
     # 背景執行主迴圈，每 0.2 秒印一次目前狀態，方便除錯
         # This function runs continuously in the background to print system state for debugging

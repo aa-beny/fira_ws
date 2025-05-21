@@ -294,7 +294,7 @@ private:
       // }
 
 
-     // 用 target_pose.position.x/z 直接判斷，不需要額外變數
+     // 到時候要改轉換完的座標判斷 用 target_pose.position.x/z 直接判斷，不需要額外變數
       if (camera_z < 0.02) {  // LOW
           if (camera_x > 0.01) {
               dx = 0.07; dy = 0.00;
@@ -389,7 +389,7 @@ private:
   void checkTimeout()
   {
     rclcpp::Time now = this->now();
-    if ((now - last_pose_time_).seconds() > 1.0)
+    if ((now - last_pose_time_).seconds() > 50.0)
     {
       RCLCPP_WARN(this->get_logger(), "No pose received recently. Stopping pose publish.");
     }

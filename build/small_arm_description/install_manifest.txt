@@ -1,17 +1,24 @@
 /home/open/work/install/small_arm_description/share/small_arm_description/meshes/link_5_1.stl
 /home/open/work/install/small_arm_description/share/small_arm_description/meshes/link_2_1.stl
 /home/open/work/install/small_arm_description/share/small_arm_description/meshes/link_3_1.stl
-/home/open/work/install/small_arm_description/share/small_arm_description/meshes/link_6_1.stl
-/home/open/work/install/small_arm_description/share/small_arm_description/meshes/RealSence_1.stl
+/home/open/work/install/small_arm_description/share/small_arm_description/meshes/Claw_base_1.stl
+/home/open/work/install/small_arm_description/share/small_arm_description/meshes/Camera_1.stl
 /home/open/work/install/small_arm_description/share/small_arm_description/meshes/link_1_1.stl
 /home/open/work/install/small_arm_description/share/small_arm_description/meshes/link_4_1.stl
-/home/open/work/install/small_arm_description/share/small_arm_description/meshes/Craw_1_1.stl
+/home/open/work/install/small_arm_description/share/small_arm_description/meshes/Claw_2_1.stl
+/home/open/work/install/small_arm_description/share/small_arm_description/meshes/Claw_1_1.stl
 /home/open/work/install/small_arm_description/share/small_arm_description/meshes/base_link.stl
-/home/open/work/install/small_arm_description/share/small_arm_description/meshes/Craw_2_1.stl
+/home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm.urdf
+/home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm copy 2.xacro
 /home/open/work/install/small_arm_description/share/small_arm_description/urdf/materials.xacro
+/home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm copy.xacro
 /home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm.ros2_control.xacro
 /home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm.urdf.xacro
 /home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm.xacro
+/home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm/small_arm.usd
+/home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm/configuration/small_arm_physics.usd
+/home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm/configuration/small_arm_base.usd
+/home/open/work/install/small_arm_description/share/small_arm_description/urdf/small_arm/configuration/small_arm_sensor.usd
 /home/open/work/install/small_arm_description/share/small_arm_description/controllers/controllers.yaml
 /home/open/work/install/small_arm_description/share/small_arm_description/launch/small_arm.rviz
 /home/open/work/install/small_arm_description/share/small_arm_description/launch/display.launch.py

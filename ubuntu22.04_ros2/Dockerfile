@@ -94,21 +94,21 @@ RUN pip3 install -vU https://github.com/CastXML/pygccxml/archive/develop.zip pyp
 
 WORKDIR /home/open/work
 
-# 這裡是正確掛 motor_control
-COPY motor_control/ motor_control/
+# # 這裡是正確掛 motor_control
+# COPY motor_control/ motor_control/
 
-# 進入motor_control資料夾
-WORKDIR /home/open/work/motor_control
+# # 進入motor_control資料夾
+# WORKDIR /home/open/work/motor_control
 
-# ✅ 在 motor_control 目錄下，clone dynamixel_sdk ROS2版本
-RUN git clone -b ros2-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git dynamixel_sdk
+# # ✅ 在 motor_control 目錄下，clone dynamixel_sdk ROS2版本
+# RUN git clone -b ros2-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git dynamixel_sdk
 
-# 回到workspace
-WORKDIR /home/open/work
+# # 回到workspace
+# WORKDIR /home/open/work
 
-# rosdep install
-RUN rosdep init && rosdep update
-RUN apt-get update && rosdep install --from-paths motor_control --ignore-src -r -y
+# # rosdep install
+# RUN rosdep init && rosdep update
+# RUN apt-get update && rosdep install --from-paths motor_control --ignore-src -r -y
 
 
 

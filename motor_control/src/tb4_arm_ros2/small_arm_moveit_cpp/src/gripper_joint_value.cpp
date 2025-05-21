@@ -31,13 +31,16 @@ private:
       return;
     }
 
-    double target_value = msg->data ? 0.0 : 1.03;
+    // double target_value = msg->data ? 0.0 : 1.03;
+    double target_value = msg->data ? 0.0 : 0.5;
     std::string action = msg->data ? "close" : "open";
 
     RCLCPP_INFO(this->get_logger(), "Received command: %s (target=%.2f)", action.c_str(), target_value);
 
     // 設定目標關節角度
-    move_group_interface_->setJointValueTarget("joint7", target_value);
+    // move_group_interface_->setJointValueTarget("joint7", target_value);
+    
+    move_group_interface_->setJointValueTarget("gripper_joint1", target_value);
 
     // 規劃並執行
     moveit::planning_interface::MoveGroupInterface::Plan plan;
