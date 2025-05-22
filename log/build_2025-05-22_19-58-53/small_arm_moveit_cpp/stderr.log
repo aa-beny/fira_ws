@@ -1,0 +1,21 @@
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:[m[K In lambda function:
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:19:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_drop_mode_[m[K’ was not declared in this scope
+   19 |         [01;31m[Kis_drop_mode_[m[K = msg->data;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:[m[K In member function ‘[01m[Kvoid GripperControlNode::init()[m[K’:
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:26:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kis_drop_mode_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   26 |     bool [01;35m[Kis_drop_mode_[m[K = false;
+      |          [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:[m[K In member function ‘[01m[Kvoid GripperControlNode::gripperCallback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:43:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_drop_mode_[m[K’ was not declared in this scope
+   43 |       target_value = [01;31m[Kis_drop_mode_[m[K ? 0.65: 0.0;  // 開啟夾爪：依 drop_mode 判斷
+      |                      [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:55:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble target_value[m[K’
+   55 |     double [01;31m[Ktarget_value[m[K = msg->data ? 0.65 : 1.05;
+      |            [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:41:12:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble target_value[m[K’ previously declared here
+   41 |     double [01;36m[Ktarget_value[m[K;
+      |            [01;36m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/gripper_joint_value.dir/build.make:76: CMakeFiles/gripper_joint_value.dir/src/gripper_joint_value.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/gripper_joint_value.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

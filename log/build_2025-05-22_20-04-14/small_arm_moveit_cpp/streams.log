@@ -1,0 +1,23 @@
+[0.350s] Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16
+[0.382s] [35m[1mConsolidate compiler generated dependencies of target gripper_joint_value[0m
+[0.392s] [ 20%] Built target ee_pose_in_base
+[0.394s] [ 40%] Built target eye_hand_pose
+[0.400s] [ 90%] Built target named_goal
+[0.400s] [ 90%] [32mBuilding CXX object CMakeFiles/gripper_joint_value.dir/src/gripper_joint_value.cpp.o[0m
+[0.400s] [ 90%] Built target auto_pose_goal
+[3.383s] [01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:[m[K In lambda function:
+[3.383s] [01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:19:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_drop_mode_[m[K’ was not declared in this scope
+[3.383s]    19 |         [01;31m[Kis_drop_mode_[m[K = msg->data;
+[3.383s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[3.384s] [01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:[m[K In member function ‘[01m[Kvoid GripperControlNode::init()[m[K’:
+[3.384s] [01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:26:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kis_drop_mode_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.384s]    26 |     bool [01;35m[Kis_drop_mode_[m[K = false;
+[3.384s]       |          [01;35m[K^~~~~~~~~~~~~[m[K
+[3.392s] [01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:[m[K In member function ‘[01m[Kvoid GripperControlNode::gripperCallback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.392s] [01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:43:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_drop_mode_[m[K’ was not declared in this scope
+[3.392s]    43 |       target_value = [01;31m[Kis_drop_mode_[m[K ? 0.65: 0.0;  // 開啟夾爪：依 drop_mode 判斷
+[3.392s]       |                      [01;31m[K^~~~~~~~~~~~~[m[K
+[6.087s] gmake[2]: *** [CMakeFiles/gripper_joint_value.dir/build.make:76: CMakeFiles/gripper_joint_value.dir/src/gripper_joint_value.cpp.o] Error 1
+[6.088s] gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/gripper_joint_value.dir/all] Error 2
+[6.088s] gmake: *** [Makefile:146: all] Error 2
+[6.090s] Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16

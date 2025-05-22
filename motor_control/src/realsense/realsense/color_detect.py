@@ -1,243 +1,130 @@
-# import rclpy
-# from rclpy.node import Node
-# from sensor_msgs.msg import Image
-# from cv_bridge import CvBridge
-# import cv2
-# import numpy as np
-# from std_msgs.msg import Float32MultiArray
+# 載入 ROS2 的必要模組
+import rclpy  # ROS2 的 Python 套件，負責啟動節點
+from rclpy.node import Node  # 所有 ROS2 節點都要繼承這個類別
 
-# # TOPIC NAMES
-# #SUB
-# COLOR_IMAGE = '/camera/color'
-# DEPTH_IMAGE = '/camera/depth'
-# WORD_POSITION = 'word_order_detect'
-# #PUB
-# BOX_EDGE_IMAGE = 'box_edge_iamge'
-# BOX_EDGE_POSITION = 'box_edge_position'
-
-# # 黑色範圍的 HSV 值
-# BLACK_HSV_RANGE = ((0, 0, 0), (180, 255, 46))
-
-# class BoxEdgeDetect(Node):
-#     def __init__(self):
-#         super().__init__('box_edge_detect')
-#         self.bridge = CvBridge()
-
-#         # 訂閱彩色影像與深度影像
-#         self.create_subscription(Image, COLOR_IMAGE, self.color_callback, 10)
-#         self.create_subscription(Image, DEPTH_IMAGE, self.depth_callback, 10)
-#         self.create_subscription(Float32MultiArray, WORD_POSITION, self.text_mid_position_callback, 10)
-
-#         # 發布檢測結果
-#         self.box_edge_image_pub = self.create_publisher(Image, BOX_EDGE_IMAGE, 10)
-#         self.box_position_detect_pub = self.create_publisher(Float32MultiArray, BOX_EDGE_POSITION, 10)
-        
-#         # 初始化變數
-#         self.color_image = None
-#         self.depth_image = None
-#         self.word_middle_position = None
-    
-#     def color_callback(self, msg):
-#         """接收並處理彩色影像：偵測輪廓並發布結果。"""
-#         self.color_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-
-#         if self.depth_image is None:
-#             self.get_logger().error('Depth image not received yet')
-#             return
-#         else:
-#             self.get_logger().info('Color image received')
-#             self.get_box_position()
-
-#     def depth_callback(self, msg):
-#         """接收深度影像"""
-#         self.depth_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
-#         if self.depth_image is None:
-#             self.get_logger().error('Depth image not received yet')
-#             return
-#         else:
-#             self.get_logger().info('Depth image received')
-
-#     def text_mid_position_callback(self, msg):
-#         """接收目標文字中點位置"""
-#         self.word_middle_position = msg.data
-#         self.get_logger().info(f'Received word middle position: {self.word_middle_position}')
-
-#     def get_box_position(self):
-#         """檢測影像中的輪廓並顯示於 OpenCV 視窗"""
-#         if self.color_image is None:
-#             self.get_logger().error('No color image available')
-#             return
-
-#         # 轉換成灰階影像
-#         gray = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2GRAY)
-
-#         # 進行二值化處理
-#         ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
-
-#         # 偵測輪廓
-#         contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-#         # 在影像上標記輪廓
-#         result_image = cv2.cvtColor(thresh, cv2.COLOR_GRAY2BGR)
-#         cv2.drawContours(result_image, contours, -1, (0, 0, 255), 2)
-#         self.get_logger().info(f'Detected {len(contours)} contours')
-
-#         # 顯示二值化影像
-#         cv2.imshow('Box Edge Detection - Binary', thresh)
-#         cv2.imshow('Box Edge Detection - Contours', result_image)
-#         cv2.waitKey(1)
-
-#         # 發布處理後的影像
-#         processed_msg = self.bridge.cv2_to_imgmsg(result_image, encoding='bgr8')
-#         self.box_edge_detect_pub.publish(processed_msg)
-
-
-# def main(args=None):
-#     rclpy.init(args=args)
-#     node = BoxEdgeDetect()
-#     rclpy.spin(node)
-#     node.destroy_node()
-#     cv2.destroyAllWindows()
-#     rclpy.shutdown()
-
-# if __name__ == '__main__':
-#     main()
-import rclpy
-from rclpy.node import Node
+# 這是影像的資料格式，用來接收來自相機的畫面
 from sensor_msgs.msg import Image
+
+# 這是 ROS 中用來發送純文字的訊息格式
+from std_msgs.msg import String
+
+# 這個模組可以把 ROS 的影像資料轉成 OpenCV 可以處理的格式
 from cv_bridge import CvBridge
+
+# OpenCV 是一個圖像處理工具，用來分析畫面
 import cv2
+
+# NumPy 是數學函式庫，用來處理矩陣（像是影像資料）
 import numpy as np
-from std_msgs.msg import Float32MultiArray
 
-# 訂閱話題
-COLOR_IMAGE = '/camera/color'
-DEPTH_IMAGE = '/camera/depth'
-WORD_POSITION = 'word_order_detect'
 
-# 發布話題
-BOX_EDGE_IMAGE = 'box_edge_image'
-BOX_EDGE_POSITION = 'box_edge_position'
-BOX_EDGE_ORIENTATION = 'box_edge_orientation'  # 新增發佈方塊方向的話題
-
-# 黑色範圍的 HSV 值
-BLACK_HSV_RANGE = ((0, 0, 0), (180, 255, 46))
-
-class BoxEdgeDetect(Node):
+# 定義一個類別 ColorObjectTracker，繼承自 ROS2 的 Node（也就是節點）
+class ColorObjectTracker(Node):
     def __init__(self):
-        super().__init__('box_edge_detect')
+        # 呼叫父類別的建構函式，設定這個節點的名字叫 color_object_tracker
+        super().__init__('color_object_tracker')
+
+        # 建立一個 bridge，讓 ROS 的影像可以轉成 OpenCV 的格式
         self.bridge = CvBridge()
-
-        # 訂閱彩色影像、深度影像與文字點位置
-        self.create_subscription(Image, COLOR_IMAGE, self.color_callback, 10)
-        self.create_subscription(Image, DEPTH_IMAGE, self.depth_callback, 10)
-        self.create_subscription(Float32MultiArray, WORD_POSITION, self.text_mid_position_callback, 10)
-
-        # 發布檢測結果
-        self.box_edge_image_pub = self.create_publisher(Image, BOX_EDGE_IMAGE, 10)
-        self.box_position_detect_pub = self.create_publisher(Float32MultiArray, BOX_EDGE_POSITION, 10)
-        self.box_orientation_pub = self.create_publisher(Float32MultiArray, BOX_EDGE_ORIENTATION, 10)  # 新增方向發佈
         
-        # 初始化變數
-        self.color_image = None
-        self.depth_image = None
-        self.word_middle_position = None
+        # 訂閱相機畫面，當有新的畫面時會叫 color_callback 這個函式來處理
+        self.color_sub = self.create_subscription(Image, '/camera/color', self.color_callback, 10)
 
+        # 準備一個發佈器，用來發送我們分析出來的顏色順序（例如 "Blue,Green,Yellow"）
+        self.color_pub = self.create_publisher(String, '/color_sort', 10)
+
+        # 定義三個顏色的 HSV 範圍（HSV 是一種顏色表達方式，比 RGB 更容易分辨顏色）
+        self.color_range = {
+            "Blue": {'min': [78, 89, 24], 'max': [115, 255, 255]},
+            "Yellow": {'min': [13, 104, 55], 'max': [46, 221, 255]},
+            "Green": {'min': [42, 52, 30], 'max': [77, 255, 255]}
+        }
+
+        # 定義這些顏色在畫面上要用什麼顏色畫框（BGR 格式）
+        self.bgr_color = {
+            "Blue": (255, 0, 0),      # 藍色
+            "Yellow": (0, 255, 255),  # 黃色
+            "Green": (0, 255, 0)      # 綠色
+        }
+
+    # 處理相機影像的函式
     def color_callback(self, msg):
-        """接收並處理彩色影像"""
-        self.color_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        if self.depth_image is not None and self.word_middle_position is not None:
-            self.detect_box_edges()
+        # 把 ROS 的影像資料轉成 OpenCV 的 BGR 格式影像
+        frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
 
-    def depth_callback(self, msg):
-        """接收深度影像"""
-        self.depth_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+        # 把 BGR 顏色空間轉成 HSV，方便我們用 HSV 範圍來找顏色
+        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    def text_mid_position_callback(self, msg):
-        """接收目標文字中點位置"""
-        self.word_middle_position = np.array(msg.data).reshape(-1, 2)  # 轉換為 (x, z) 陣列
-        self.get_logger().info(f'Received word middle position: {self.word_middle_position}')
+        # 建立一個 list，用來存放我們找到的物體中心點 X 座標 和 顏色名稱
+        detected_objects = []
 
-    def detect_box_edges(self):
-        """檢測影像中的黑色區域來確定木頭方塊位置"""
-        if self.color_image is None:
-            self.get_logger().error('No color image available')
-            return
+        # 針對每一種顏色開始偵測
+        for color_name, hsv_range in self.color_range.items():
+            # 把 HSV 範圍轉成 NumPy 陣列
+            lower = np.array(hsv_range['min'])
+            upper = np.array(hsv_range['max'])
 
-        # 轉換成 HSV 影像
-        hsv_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2HSV)
-        mask = cv2.inRange(hsv_image, np.array(BLACK_HSV_RANGE[0]), np.array(BLACK_HSV_RANGE[1]))
+            # 產生遮罩，只保留在這個顏色範圍內的區域（其他全部變成黑色）
+            mask = cv2.inRange(hsv, lower, upper)
 
-        # 偵測輪廓
-        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        result_image = self.color_image.copy()
-        box_positions = []
-        box_orientations = []
+            # 找遮罩中的所有輪廓（也就是可能的顏色區塊）
+            contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        for contour in contours:
-            if cv2.contourArea(contour) > 500:  # 忽略小區域
-                rect = cv2.minAreaRect(contour)
-                box = cv2.boxPoints(rect)
-                box = np.intp(box)  # 轉換為整數座標
-                cv2.drawContours(result_image, [box], 0, (0, 255, 0), 2)
+            # 一個一個檢查輪廓
+            for cnt in contours:
+                # 如果這個輪廓太小（面積小於 500），就跳過不要理他
+                if cv2.contourArea(cnt) > 500:
+                    # 用矩形包住這個區塊
+                    x, y, w, h = cv2.boundingRect(cnt)
+                    # 算出這個矩形的中心點 X 座標
+                    cx = x + w // 2
 
-                # 獲取中心點與角度
-                center_x, center_y = int(rect[0][0]), int(rect[0][1])
-                angle = rect[2]  # 旋轉角度
-                
-                # 調整角度範圍到 -90 到 90 度
-                if angle < -45:
-                    angle += 90
-                
-                # 比較與文字點的關係來確保方向
-                nearest_text_point = min(self.word_middle_position, key=lambda p: np.linalg.norm(np.array([p[0], p[1]]) - np.array([center_x, center_y])))
+                    # 把這個物體記錄下來（X 座標 + 顏色）
+                    detected_objects.append((cx, color_name))
 
-                # 判斷方向是否正確 (假設文字應該靠近方塊的某個固定邊)
-                dx = nearest_text_point[0] - center_x
-                dz = nearest_text_point[1] - center_y
-                if abs(dx) > abs(dz):
-                    orientation = "Horizontal" if angle < 10 else "Rotated"
-                else:
-                    orientation = "Vertical" if angle < 10 else "Rotated"
+                    # 在畫面上畫出矩形框和文字
+                    cv2.rectangle(frame, (x, y), (x + w, y + h), self.bgr_color[color_name], 2)
+                    cv2.putText(frame, color_name, (x, y - 10),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.7, self.bgr_color[color_name], 2)
 
-                self.get_logger().info(f'Box at ({center_x}, {center_y}) - Angle: {angle:.2f}, Orientation: {orientation}')
+        # 把所有找到的顏色物體依照 X 座標排序（從左到右）
+        detected_objects.sort(key=lambda obj: obj[0])
 
-                # 存儲結果
-                box_positions.append((center_x, center_y))
-                box_orientations.append((center_x, center_y, angle, 1 if orientation == "Horizontal" else 0))
+        # 取出排序好的顏色名稱（只要 color_name 部分）
+        sorted_colors = [obj[1] for obj in detected_objects]
 
-        # 顯示影像
-        cv2.imshow('Box Edge Detection', result_image)
-        cv2.imshow('Box Edge Mask', mask)
-        cv2.waitKey(1)
+        # 如果有找到顏色物體就發送出去
+        if sorted_colors:
+            # 把顏色陣列轉成一個逗號分隔的字串
+            sorted_str = ','.join(sorted_colors)
 
-        # 發布處理後的影像
-        processed_msg = self.bridge.cv2_to_imgmsg(result_image, encoding='bgr8')
-        self.box_edge_image_pub.publish(processed_msg)
+            # 建立 ROS String 訊息並放入資料
+            msg = String()
+            msg.data = sorted_str
 
-        # 發布木頭方塊位置
-        position_msg = Float32MultiArray()
-        for pos in box_positions:
-            position_msg.data.extend([float(pos[0]), float(pos[1])])
-        self.box_position_detect_pub.publish(position_msg)
+            # 發布這個訊息到 /color_sort
+            self.color_pub.publish(msg)
 
-        # 發布木頭方塊方向
-        orientation_msg = Float32MultiArray()
-        for orient in box_orientations:
-            orientation_msg.data.extend([float(orient[0]), float(orient[1]), float(orient[2]), float(orient[3])])
-        self.box_orientation_pub.publish(orientation_msg)
+            # 印出訊息，方便我們除錯或觀察
+            self.get_logger().info(f'Published colors: {msg.data}')
 
+        # 顯示畫面，讓我們看到偵測結果
+        cv2.imshow("Color Detection", frame)
+        cv2.waitKey(1)  # 每張畫面顯示一下再換下一張
+
+# 程式的進入點（主函式）
 def main(args=None):
-    rclpy.init(args=args)
-    node = BoxEdgeDetect()
+    rclpy.init(args=args)  # 初始化 ROS2
+    node = ColorObjectTracker()  # 建立我們的節點物件
     try:
-        rclpy.spin(node)
+        rclpy.spin(node)  # 進入 ROS 的無限迴圈，等待影像訊息進來
     except KeyboardInterrupt:
-        pass
-    finally:
-        node.destroy_node()
-        cv2.destroyAllWindows()
-        rclpy.shutdown()
+        pass  # 如果按 Ctrl+C 結束，就直接跳出
+    node.destroy_node()  # 關閉節點
+    rclpy.shutdown()  # 關閉 ROS
+    cv2.destroyAllWindows()  # 關掉 OpenCV 所有視窗
 
+# 如果這個檔案是主程式，就執行 main()
 if __name__ == '__main__':
     main()
+

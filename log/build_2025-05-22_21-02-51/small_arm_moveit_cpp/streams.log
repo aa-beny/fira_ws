@@ -1,0 +1,38 @@
+[0.341s] Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16
+[0.375s] [35m[1mConsolidate compiler generated dependencies of target gripper_joint_value[0m
+[0.386s] [ 10%] [32mBuilding CXX object CMakeFiles/ee_pose_in_base.dir/src/ee_pose_in_base.cpp.o[0m
+[0.390s] [ 80%] Built target auto_pose_goal
+[0.390s] [ 90%] Built target gripper_joint_value
+[0.390s] [ 90%] Built target named_goal
+[0.390s] [ 90%] Built target eye_hand_pose
+[9.109s] [100%] [32m[1mLinking CXX executable ee_pose_in_base[0m
+[9.798s] [100%] Built target ee_pose_in_base
+[9.804s] Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16
+[9.805s] Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_cpp
+[9.809s] -- Install configuration: ""
+[9.810s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/named_goal
+[9.810s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/ee_pose_in_base
+[9.815s] -- Set runtime path of "/home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/ee_pose_in_base" to ""
+[9.815s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/eye_hand_pose
+[9.815s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/auto_pose_goal
+[9.815s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/gripper_joint_value
+[9.815s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/launch
+[9.815s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/launch/motion_planning.launch.py
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/config
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/config/moveit_cpp.yaml
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/ament_index/resource_index/package_run_dependencies/small_arm_moveit_cpp
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/ament_index/resource_index/parent_prefix_path/small_arm_moveit_cpp
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/ament_prefix_path.sh
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/ament_prefix_path.dsv
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/path.sh
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/path.dsv
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.bash
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.sh
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.zsh
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.dsv
+[9.816s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.dsv
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/ament_index/resource_index/packages/small_arm_moveit_cpp
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/cmake/small_arm_moveit_cppConfig.cmake
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/cmake/small_arm_moveit_cppConfig-version.cmake
+[9.816s] -- Up-to-date: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.xml
+[9.817s] Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_cpp

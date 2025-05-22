@@ -117,6 +117,8 @@
 #include <tf2/LinearMath/Transform.h>
 #include <tf2/LinearMath/Quaternion.h>
 #include "std_msgs/msg/float32.hpp"
+#include "std_msgs/msg/bool.hpp"
+
 float received_target_z_; // 初始值（避免沒收到）
 bool target_z_received_ = false;
 bool pose_received_ = false;
@@ -144,7 +146,13 @@ public:
       "/text_coordinate", 10,
       std::bind(&CameraToBasePrinter::callback, this, std::placeholders::_1)
     );
-
+    task_mode_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+      "/task_mode", 10,
+      [this](const std_msgs::msg::Bool::SharedPtr msg) {
+        is_drop_mode_ = msg->data;
+        RCLCPP_INFO(this->get_logger(), "📦 Task mode: %s", is_drop_mode_ ? "DROP (no dx/dy)" : "PICK (with compensation)");
+      }
+    );
     z_level_sub_ = this->create_subscription<std_msgs::msg::Float32>(
     "/target_z_height", 10,
     [this](std_msgs::msg::Float32::SharedPtr msg) {
@@ -171,7 +179,7 @@ private:
   {
     double camera_x = msg->position.x;
     double camera_z = msg->position.z;
-
+    double camera_y = msg->position.y;
     // double received_target_z_ = 0.105;  // 預設高度
     // bool executed_ = false;  
     
@@ -295,36 +303,106 @@ private:
 
 
      // 到時候要改轉換完的座標判斷 用 target_pose.position.x/z 直接判斷，不需要額外變數
-      if (camera_z < 0.02) {  // LOW
-          if (camera_x > 0.01) {
-              dx = 0.07; dy = 0.00;
-              RCLCPP_INFO(this->get_logger(), "🟥 LOW-RIGHT → dx=%.3f dy=%.3f", dx, dy);
-          } else {
-              dx = -0.02; dy = 0.00;
-              RCLCPP_INFO(this->get_logger(), "🟥 LOW-LEFT → dx=%.3f dy=%.3f", dx, dy);
+      // if (camera_z < 0.02) {  // LOW
+      //     if (camera_x > 0.01) {
+      //         dx = 0.07; dy = 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟥 LOW-RIGHT → dx=%.3f dy=%.3f", dx, dy);
+      //     } else {
+      //         dx = -0.02; dy = 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟥 LOW-LEFT → dx=%.3f dy=%.3f", dx, dy);
+      //     }
+      // } else if (camera_z < 0.08) {  // MID
+      //     if (camera_x > 0.01) {
+      //         dx = 0.07; dy = 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟧 MID-RIGHT → dx=%.3f dy=%.3f", dx, dy);
+      //     } else {
+      //         dx = -0.02; dy = 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟧 MID-LEFT → dx=%.3f dy=%.3f", dx, dy);
+      //     }
+      // } else {  // HIGH
+      //     if (camera_x > 0.01) {
+      //         dx = 0.02; dy = 0.000;
+      //         // dx = 0.0; dy = 0.0;
+      //         RCLCPP_INFO(this->get_logger(), "🟩 HIGH-RIGHT → dx=%.3f dy=%.3f", dx, dy);
+      //     } else {
+      //         dx = -0.00; dy = 0.000;
+      //         //  dx = 0.0; dy = 0.0;
+      //         RCLCPP_INFO(this->get_logger(), "🟩 HIGH-LEFT → dx=%.3f dy=%.3f", dx, dy);
+      //     }
+      // }
+
+      // double dx = 0.0, dy = 0.0;
+      bool is_upper = (camera_y > 0.00);  // ✅ 由 camera_y 判斷是否偏上
+
+      if (is_drop_mode_) {
+        RCLCPP_INFO(this->get_logger(), "📦 DROP mode → Skip dx/dy compensation");
+} else {
+      // if (camera_z < 0.02) {  // LOW
+      //     if (camera_x > 0.00) {
+      //         dx = 0.070;
+      //         dy = (camera_y > 0.00) ? 0.030 : 0.00;  // 上+2cm，下-1cm
+      //         RCLCPP_INFO(this->get_logger(), "🟥 LOW-RIGHT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
+      //     } else {
+      //         dx = -0.020;
+      //         dy = (camera_y > 0.00) ? 0.030 : 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟥 LOW-LEFT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
+      //     }
+      // } else if (camera_z < 0.08) {  // MID
+      //     if (camera_x > 0.01) {
+      //         dx = 0.070;
+      //         dy = (camera_y > 0.00) ? 0.030 : 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟧 MID-RIGHT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
+      //     } else {
+      //         dx = -0.020;
+      //         dy = (camera_y > 0.00) ? 0.030 : 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟧 MID-LEFT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
+      //     }
+      // } else {  // HIGH
+      //     if (camera_x > 0.01) {
+      //         dx = 0.015;
+      //         dy = (camera_y > 0.00) ? 0.030 : 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟩 HIGH-RIGHT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
+      //     } else {
+      //         dx = -0.020;
+      //         dy = (camera_y > 0.00) ? 0.030 : 0.00;
+      //         RCLCPP_INFO(this->get_logger(), "🟩 HIGH-LEFT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
+      //     }
+      // }
+      // ✅ 動態補償參數（根據你量的數據修正）
+      if (camera_z < 0.02) {  // 🟥 LOW 高度
+          if (camera_x > 0.00) {  // RIGHT
+              dx = 0.055;  // 原本0.070 → x太右，減少偏移
+              dy = (camera_y > 0.00) ? 0.055 : -0.030;  // 上：太前，向後移；下：太後，向前移
+              RCLCPP_INFO(this->get_logger(), "🟥 LOW-RIGHT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
+          } else {  // LEFT
+              dx = -0.080;  // 原本-0.020 → 太偏右，往左更多
+              dy = (camera_y > 0.00) ? 0.055 : -0.030;
+              RCLCPP_INFO(this->get_logger(), "🟥 LOW-LEFT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
           }
-      } else if (camera_z < 0.08) {  // MID
-          if (camera_x > 0.01) {
-              dx = 0.07; dy = 0.00;
-              RCLCPP_INFO(this->get_logger(), "🟧 MID-RIGHT → dx=%.3f dy=%.3f", dx, dy);
+      } else if (camera_z < 0.08) {  // 🟧 MID 高度
+          if (camera_x > 0.00) {
+              dx = 0.045;  // 減少右邊偏移
+              dy = (camera_y > 0.00) ? 0.050 : -0.025;
+              RCLCPP_INFO(this->get_logger(), "🟧 MID-RIGHT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
           } else {
-              dx = -0.02; dy = 0.00;
-              RCLCPP_INFO(this->get_logger(), "🟧 MID-LEFT → dx=%.3f dy=%.3f", dx, dy);
+              dx = -0.065;
+              dy = (camera_y > 0.00) ? 0.050 : -0.025;
+              RCLCPP_INFO(this->get_logger(), "🟧 MID-LEFT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
           }
-      } else {  // HIGH
-          if (camera_x > 0.01) {
-              dx = 0.02; dy = 0.000;
-              // dx = 0.0; dy = 0.0;
-              RCLCPP_INFO(this->get_logger(), "🟩 HIGH-RIGHT → dx=%.3f dy=%.3f", dx, dy);
+      } else {  // 🟩 HIGH 高度
+          if (camera_x > 0.00) {
+              dx = 0.030;
+              dy = (camera_y > 0.00) ? 0.050 : -0.020;
+              RCLCPP_INFO(this->get_logger(), "🟩 HIGH-RIGHT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
           } else {
-              dx = -0.00; dy = 0.000;
-              //  dx = 0.0; dy = 0.0;
-              RCLCPP_INFO(this->get_logger(), "🟩 HIGH-LEFT → dx=%.3f dy=%.3f", dx, dy);
+              dx = -0.050;
+              dy = (camera_y > 0.00) ? 0.050 : -0.020;
+              RCLCPP_INFO(this->get_logger(), "🟩 HIGH-LEFT-%s → dx=%.3f dy=%.3f", is_upper ? "UP" : "DOWN", dx, dy);
           }
       }
 
-
-
+}
+      
 
 
 
@@ -403,6 +481,9 @@ private:
   tf2_ros::TransformListener tf_listener_;
   rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr subscription_;
   rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr publisher_;
+
+  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr task_mode_sub_;
+  bool is_drop_mode_ = false;
 
   rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr z_level_sub_;
 

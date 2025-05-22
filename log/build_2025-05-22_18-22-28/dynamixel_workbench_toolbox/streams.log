@@ -1,0 +1,73 @@
+[0.020s] Invoking command in '/home/open/work/build/dynamixel_workbench_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake /home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox -DCMAKE_INSTALL_PREFIX=/home/open/work/install/dynamixel_workbench_toolbox
+[0.360s] -- The C compiler identification is GNU 11.4.0
+[0.361s] -- The CXX compiler identification is GNU 11.4.0
+[0.361s] -- Detecting C compiler ABI info
+[0.361s] -- Detecting C compiler ABI info - done
+[0.361s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.361s] -- Detecting C compile features
+[0.361s] -- Detecting C compile features - done
+[0.361s] -- Detecting CXX compiler ABI info
+[0.361s] -- Detecting CXX compiler ABI info - done
+[0.361s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.361s] -- Detecting CXX compile features
+[0.361s] -- Detecting CXX compile features - done
+[0.362s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.363s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.447s] -- Found dynamixel_sdk: 3.8.3 (/opt/ros/humble/share/dynamixel_sdk/cmake)
+[0.451s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.512s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.517s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.526s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.538s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.554s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.601s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.604s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.630s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.641s] -- Looking for pthread.h
+[0.692s] -- Looking for pthread.h - found
+[0.692s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.746s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.746s] -- Found Threads: TRUE  
+[0.851s] -- Configuring done
+[0.859s] -- Generating done
+[0.861s] -- Build files have been written to: /home/open/work/build/dynamixel_workbench_toolbox
+[0.868s] Invoked command in '/home/open/work/build/dynamixel_workbench_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake /home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox -DCMAKE_INSTALL_PREFIX=/home/open/work/install/dynamixel_workbench_toolbox
+[0.869s] Invoking command in '/home/open/work/build/dynamixel_workbench_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_toolbox -- -j16 -l16
+[0.908s] [ 60%] [32mBuilding CXX object CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynamixel_item.cpp.o[0m
+[0.908s] [ 60%] [32mBuilding CXX object CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynamixel_tool.cpp.o[0m
+[0.908s] [ 60%] [32mBuilding CXX object CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynamixel_driver.cpp.o[0m
+[0.908s] [ 80%] [32mBuilding CXX object CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynamixel_workbench.cpp.o[0m
+[1.150s] [100%] [32m[1mLinking CXX shared library libdynamixel_workbench_toolbox.so[0m
+[1.207s] [100%] Built target dynamixel_workbench_toolbox
+[1.215s] Invoked command in '/home/open/work/build/dynamixel_workbench_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_toolbox -- -j16 -l16
+[1.216s] Invoking command in '/home/open/work/build/dynamixel_workbench_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_toolbox
+[1.220s] -- Install configuration: ""
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/lib/libdynamixel_workbench_toolbox.so
+[1.221s] -- Set runtime path of "/home/open/work/install/dynamixel_workbench_toolbox/lib/libdynamixel_workbench_toolbox.so" to ""
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/include/
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/include//dynamixel_workbench_toolbox
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/include//dynamixel_workbench_toolbox/dynamixel_tool.h
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/include//dynamixel_workbench_toolbox/dynamixel_item.h
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/include//dynamixel_workbench_toolbox/dynamixel_workbench.h
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/include//dynamixel_workbench_toolbox/dynamixel_driver.h
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/environment/library_path.sh
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/environment/library_path.dsv
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/ament_index/resource_index/package_run_dependencies/dynamixel_workbench_toolbox
+[1.221s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/ament_index/resource_index/parent_prefix_path/dynamixel_workbench_toolbox
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/environment/ament_prefix_path.sh
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/environment/ament_prefix_path.dsv
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/environment/path.sh
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/environment/path.dsv
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/local_setup.bash
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/local_setup.sh
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/local_setup.zsh
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/local_setup.dsv
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.dsv
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/ament_index/resource_index/packages/dynamixel_workbench_toolbox
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/cmake/ament_cmake_export_libraries-extras.cmake
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/cmake/dynamixel_workbench_toolboxConfig.cmake
+[1.222s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/cmake/dynamixel_workbench_toolboxConfig-version.cmake
+[1.223s] -- Installing: /home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.xml
+[1.224s] Invoked command in '/home/open/work/build/dynamixel_workbench_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_toolbox

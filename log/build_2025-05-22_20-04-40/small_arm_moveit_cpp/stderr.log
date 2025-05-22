@@ -1,0 +1,7 @@
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:[m[K In lambda function:
+[01m[K/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp/src/gripper_joint_value.cpp:19:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_drop_mode_[m[K’ was not declared in this scope
+   19 |         [01;31m[Kis_drop_mode_[m[K = msg->data;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/gripper_joint_value.dir/build.make:76: CMakeFiles/gripper_joint_value.dir/src/gripper_joint_value.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/gripper_joint_value.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

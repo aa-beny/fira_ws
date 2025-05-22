@@ -6,6 +6,7 @@
 class GripperControlNode : public rclcpp::Node
 {
 bool is_gripper_busy_ = false;
+bool is_drop_mode_ = false;
 public:
   GripperControlNode()
   : Node("gripper_control_node")
@@ -13,10 +14,17 @@ public:
     gripper_cmd_sub_ = this->create_subscription<std_msgs::msg::Bool>(
       "/gripper_command", 10,
       std::bind(&GripperControlNode::gripperCallback, this, std::placeholders::_1));
+    drop_mode_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+      "/is_drop_mode", 10,
+      [this](const std_msgs::msg::Bool::SharedPtr msg) {
+        is_drop_mode_ = msg->data;
+        RCLCPP_INFO(this->get_logger(), "📦 Drop Mode set to: %s", is_drop_mode_ ? "true" : "false");
+      });
   }
 
   void init()
   {
+    
     // 修正版本：使用 this->shared_from_this()
     move_group_interface_ = std::make_shared<moveit::planning_interface::MoveGroupInterface>(
       this->shared_from_this(), "gripper");
@@ -26,13 +34,28 @@ public:
 private:
   void gripperCallback(const std_msgs::msg::Bool::SharedPtr msg)
   {
+
+    
     if (!move_group_interface_) {
       RCLCPP_ERROR(this->get_logger(), "MoveGroupInterface not initialized yet!");
       return;
     }
+    double target_value;
+    if (msg->data) {
+      target_value = is_drop_mode_ ? 0.65: 0.0;  // 開啟夾爪：依 drop_mode 判斷  
+    } else {
+      
+      target_value = 1.03;// 關閉夾爪
+    }
+// 如果 msg->data == true：進入上方 if，打開
 
-    // double target_value = msg->data ? 0.0 : 1.03;
-    double target_value = msg->data ? 0.0 : 0.5;
+// 如果 msg->data == false：進入 else，夾資子關
+
+// 如果 is_drop_mode_ == true：目標值為 1.03
+
+// 如果 is_drop_mode_ == false：目標值為 0.5
+    // double target_value = msg->data ? 0.65 : 1.05;
+    // double target_value = msg->data ? 0.0 :1.05;
     std::string action = msg->data ? "close" : "open";
 
     RCLCPP_INFO(this->get_logger(), "Received command: %s (target=%.2f)", action.c_str(), target_value);
@@ -99,6 +122,7 @@ private:
 
   std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group_interface_;
   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr gripper_cmd_sub_;
+  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr drop_mode_sub_;
 };
 
 int main(int argc, char * argv[])

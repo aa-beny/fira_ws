@@ -1,0 +1,1137 @@
+[0.068s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.068s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7a786c79c8e0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a786c79c400>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a786c79c400>>)
+[0.178s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.179s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/open/work'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'ignore_ament_install'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extensions ['colcon_pkg']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'colcon_pkg'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'colcon_meta'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extensions ['ros']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'ros'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extensions ['cmake', 'python']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'cmake'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'python'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extensions ['python_setup_py']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control) by extension 'python_setup_py'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extensions ['ignore', 'ignore_ament_install']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'ignore'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'ignore_ament_install'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extensions ['colcon_pkg']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'colcon_pkg'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extensions ['colcon_meta']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'colcon_meta'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extensions ['ros']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'ros'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extensions ['cmake', 'python']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'cmake'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'python'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extensions ['python_setup_py']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src) by extension 'python_setup_py'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extensions ['ignore', 'ignore_ament_install']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extension 'ignore'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extension 'ignore_ament_install'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extensions ['colcon_pkg']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extension 'colcon_pkg'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extensions ['colcon_meta']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extension 'colcon_meta'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extensions ['ros']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/core) by extension 'ros'
+[0.190s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/core' with type 'ros.ament_python' and name 'core'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'ignore_ament_install'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extensions ['colcon_pkg']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'colcon_pkg'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extensions ['colcon_meta']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'colcon_meta'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extensions ['ros']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'ros'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extensions ['cmake', 'python']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'cmake'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'python'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extensions ['python_setup_py']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench) by extension 'python_setup_py'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extension 'ignore_ament_install'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extensions ['colcon_pkg']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench) by extension 'ros'
+[0.191s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/dynamixel-workbench/dynamixel_workbench' with type 'ros.ament_cmake' and name 'dynamixel_workbench'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox) by extension 'ros'
+[0.192s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox' with type 'ros.ament_cmake' and name 'dynamixel_workbench_toolbox'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'ros'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extensions ['cmake', 'python']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'cmake'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'python'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extensions ['python_setup_py']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs) by extension 'python_setup_py'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extension 'colcon_meta'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extensions ['ros']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs) by extension 'ros'
+[0.193s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs' with type 'ros.ament_cmake' and name 'dynamixel_workbench_msgs'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extensions ['ignore', 'ignore_ament_install']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extension 'ignore'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extension 'ignore_ament_install'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extensions ['colcon_pkg']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extension 'colcon_pkg'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extensions ['colcon_meta']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extension 'colcon_meta'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extensions ['ros']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/realsense) by extension 'ros'
+[0.194s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/realsense' with type 'ros.ament_python' and name 'realsense'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extensions ['colcon_pkg']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'colcon_pkg'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extensions ['colcon_meta']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'colcon_meta'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extensions ['ros']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'ros'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extensions ['cmake', 'python']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'cmake'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'python'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extensions ['python_setup_py']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2) by extension 'python_setup_py'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extensions ['colcon_pkg']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extension 'colcon_pkg'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extensions ['colcon_meta']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extension 'colcon_meta'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extensions ['ros']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/dynamixel_hardware) by extension 'ros'
+[0.195s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/tb4_arm_ros2/dynamixel_hardware' with type 'ros.ament_cmake' and name 'dynamixel_hardware'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extension 'ignore'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extension 'ignore_ament_install'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extensions ['colcon_pkg']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extension 'colcon_pkg'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extensions ['colcon_meta']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extension 'colcon_meta'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extensions ['ros']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_description) by extension 'ros'
+[0.196s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/tb4_arm_ros2/small_arm_description' with type 'ros.ament_cmake' and name 'small_arm_description'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extension 'ignore_ament_install'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extensions ['colcon_pkg']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extension 'colcon_pkg'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extensions ['colcon_meta']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extension 'colcon_meta'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extensions ['ros']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_config) by extension 'ros'
+[0.197s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/tb4_arm_ros2/small_arm_moveit_config' with type 'ros.ament_cmake' and name 'small_arm_moveit_config'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extension 'ignore_ament_install'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extensions ['colcon_pkg']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extension 'colcon_pkg'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extensions ['colcon_meta']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extension 'colcon_meta'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extensions ['ros']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp) by extension 'ros'
+[0.198s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp' with type 'ros.ament_cmake' and name 'small_arm_moveit_cpp'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'ros'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extensions ['cmake', 'python']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'cmake'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'python'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extensions ['python_setup_py']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm) by extension 'python_setup_py'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'ros'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extensions ['cmake', 'python']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'cmake'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'python'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extensions ['python_setup_py']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src) by extension 'python_setup_py'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'ignore_ament_install'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extensions ['colcon_pkg']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'colcon_pkg'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extensions ['colcon_meta']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'ros'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extensions ['cmake', 'python']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'cmake'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'python'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extensions ['python_setup_py']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description) by extension 'python_setup_py'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'ignore_ament_install'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extensions ['colcon_pkg']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'colcon_pkg'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extensions ['colcon_meta']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'ros'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extensions ['cmake', 'python']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'cmake'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'python'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extensions ['python_setup_py']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/SMW-G02(2.0)_camera_urdf_description) by extension 'python_setup_py'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'ignore_ament_install'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extensions ['colcon_pkg']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'colcon_pkg'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extensions ['colcon_meta']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'ros'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extensions ['cmake', 'python']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'cmake'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'python'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extensions ['python_setup_py']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/config) by extension 'python_setup_py'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'ros'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extensions ['cmake', 'python']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'cmake'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'python'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extensions ['python_setup_py']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/launch) by extension 'python_setup_py'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'ros'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extensions ['cmake', 'python']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'cmake'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'python'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extensions ['python_setup_py']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/meshes) by extension 'python_setup_py'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'ros'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extensions ['cmake', 'python']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'cmake'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'python'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extensions ['python_setup_py']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/resource) by extension 'python_setup_py'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'ros'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extensions ['cmake', 'python']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'cmake'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'python'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extensions ['python_setup_py']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/test) by extension 'python_setup_py'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'ros'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extensions ['cmake', 'python']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'cmake'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'python'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extensions ['python_setup_py']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/SMW-G02(2.0)_camera_urdf_description/urdf) by extension 'python_setup_py'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/arm_control) by extension 'ros'
+[0.202s] DEBUG:colcon.colcon_core.package_identification:Package 'robot_arm/src/arm_control' with type 'ros.ament_cmake' and name 'arm_control'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/build) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/build) ignored
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/install) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/install) ignored
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/log) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/log) ignored
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extension 'ignore_ament_install'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extensions ['colcon_pkg']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extension 'colcon_pkg'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extensions ['colcon_meta']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(robot_arm/src/moviet) by extension 'ros'
+[0.203s] DEBUG:colcon.colcon_core.package_identification:Package 'robot_arm/src/moviet' with type 'ros.ament_cmake' and name 'moviet'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['python_setup_py']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'python_setup_py'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'ros'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['cmake', 'python']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'cmake'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'python'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['python_setup_py']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'python_setup_py'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'ros'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['cmake', 'python']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'cmake'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'python'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['python_setup_py']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'python_setup_py'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'ros'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['cmake', 'python']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'cmake'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'python'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['python_setup_py']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'python_setup_py'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'ignore_ament_install'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['colcon_pkg']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'ros'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['cmake', 'python']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'cmake'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'python'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['python_setup_py']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'python_setup_py'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'ignore_ament_install'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['colcon_pkg']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'ros'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['cmake', 'python']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'cmake'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'python'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['python_setup_py']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'python_setup_py'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'ros'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['cmake', 'python']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'cmake'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'python'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['python_setup_py']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'python_setup_py'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'ros'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['cmake', 'python']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'cmake'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'python'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['python_setup_py']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'python_setup_py'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'ros'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['cmake', 'python']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'cmake'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'python'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['python_setup_py']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'python_setup_py'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'ros'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['cmake', 'python']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'cmake'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'python'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['python_setup_py']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'python_setup_py'
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.230s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_target' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'arm_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.231s] DEBUG:colcon.colcon_core.verb:Building package 'arm_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/arm_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/arm_control', 'merge_install': False, 'path': '/home/open/work/robot_arm/src/arm_control', 'symlink_install': False, 'test_result_base': None}
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_target' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_clean_first' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_force_configure' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'ament_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.231s] DEBUG:colcon.colcon_core.verb:Building package 'core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/core', 'merge_install': False, 'path': '/home/open/work/motor_control/src/core', 'symlink_install': False, 'test_result_base': None}
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'cmake_target' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.231s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.231s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_workbench_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/dynamixel_workbench_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/dynamixel_workbench_msgs', 'merge_install': False, 'path': '/home/open/work/motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'cmake_target' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'cmake_clean_cache' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'cmake_clean_first' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'cmake_force_configure' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'ament_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'catkin_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench_toolbox' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.232s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_workbench_toolbox' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/dynamixel_workbench_toolbox', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/dynamixel_workbench_toolbox', 'merge_install': False, 'path': '/home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox', 'symlink_install': False, 'test_result_base': None}
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'cmake_target' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'cmake_clean_cache' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'cmake_clean_first' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'cmake_force_configure' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'ament_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'catkin_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'realsense' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.232s] DEBUG:colcon.colcon_core.verb:Building package 'realsense' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/realsense', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/realsense', 'merge_install': False, 'path': '/home/open/work/motor_control/src/realsense', 'symlink_install': False, 'test_result_base': None}
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'cmake_target' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'cmake_clean_cache' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'cmake_clean_first' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'cmake_force_configure' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'ament_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'catkin_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_cpp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.232s] DEBUG:colcon.colcon_core.verb:Building package 'small_arm_moveit_cpp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/small_arm_moveit_cpp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/small_arm_moveit_cpp', 'merge_install': False, 'path': '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp', 'symlink_install': False, 'test_result_base': None}
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'cmake_target' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.233s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/dynamixel_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/dynamixel_hardware', 'merge_install': False, 'path': '/home/open/work/motor_control/src/tb4_arm_ros2/dynamixel_hardware', 'symlink_install': False, 'test_result_base': None}
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'cmake_target' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'cmake_clean_cache' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'cmake_clean_first' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'cmake_force_configure' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'ament_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'catkin_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_workbench' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.233s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_workbench' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/dynamixel_workbench', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/dynamixel_workbench', 'merge_install': False, 'path': '/home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench', 'symlink_install': False, 'test_result_base': None}
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'cmake_target' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'cmake_clean_cache' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'cmake_clean_first' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'cmake_force_configure' from command line to 'False'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'ament_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'catkin_cmake_args' from command line to 'None'
+[0.233s] Level 5:colcon.colcon_core.verb:set package 'moviet' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.233s] DEBUG:colcon.colcon_core.verb:Building package 'moviet' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/moviet', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/moviet', 'merge_install': False, 'path': '/home/open/work/robot_arm/src/moviet', 'symlink_install': False, 'test_result_base': None}
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'cmake_args' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'cmake_target' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.234s] DEBUG:colcon.colcon_core.verb:Building package 'small_arm_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/small_arm_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/small_arm_description', 'merge_install': False, 'path': '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_description', 'symlink_install': False, 'test_result_base': None}
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.234s] Level 5:colcon.colcon_core.verb:set package 'small_arm_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.234s] DEBUG:colcon.colcon_core.verb:Building package 'small_arm_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/open/work/build/small_arm_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/open/work/install/small_arm_moveit_config', 'merge_install': False, 'path': '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[0.234s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.235s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.235s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox' with build type 'ament_cmake'
+[0.235s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench_toolbox'
+[0.237s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.237s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.237s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.240s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/robot_arm/src/arm_control' with build type 'ament_cmake'
+[0.240s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/robot_arm/src/arm_control'
+[0.241s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.241s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.243s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/open/work/motor_control/src/core' with build type 'ament_python'
+[0.243s] Level 1:colcon.colcon_core.shell:create_environment_hook('core', 'ament_prefix_path')
+[0.243s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/core/share/core/hook/ament_prefix_path.ps1'
+[0.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/core/share/core/hook/ament_prefix_path.dsv'
+[0.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/core/share/core/hook/ament_prefix_path.sh'
+[0.244s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.244s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.247s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs' with build type 'ament_cmake'
+[0.247s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/motor_control/src/dynamixel-workbench-msgs/dynamixel_workbench_msgs'
+[0.247s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.247s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.249s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/open/work/motor_control/src/realsense' with build type 'ament_python'
+[0.250s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense', 'ament_prefix_path')
+[0.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/realsense/share/realsense/hook/ament_prefix_path.ps1'
+[0.250s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/realsense/share/realsense/hook/ament_prefix_path.dsv'
+[0.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/realsense/share/realsense/hook/ament_prefix_path.sh'
+[0.251s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.251s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.253s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp' with build type 'ament_cmake'
+[0.253s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp'
+[0.253s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.253s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.259s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_workbench_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_toolbox -- -j16 -l16
+[0.261s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/arm_control -- -j16 -l16
+[0.430s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/open/work/motor_control/src/core'
+[0.430s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.430s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.435s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_workbench_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_msgs -- -j16 -l16
+[0.621s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/open/work/motor_control/src/realsense'
+[0.621s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.621s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.628s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/arm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/arm_control -- -j16 -l16
+[0.636s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/arm_control
+[0.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_workbench_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_toolbox -- -j16 -l16
+[0.638s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_workbench_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_toolbox
+[0.641s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16
+[0.650s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_control)
+[0.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/arm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/arm_control
+[0.652s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control' for CMake module files
+[0.652s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control' for CMake config files
+[0.652s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_control', 'cmake_prefix_path')
+[0.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/arm_control/share/arm_control/hook/cmake_prefix_path.ps1'
+[0.653s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/arm_control/share/arm_control/hook/cmake_prefix_path.dsv'
+[0.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/arm_control/share/arm_control/hook/cmake_prefix_path.sh'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/bin'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/lib/pkgconfig/arm_control.pc'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/lib/python3.10/site-packages'
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/bin'
+[0.655s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.ps1'
+[0.655s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/arm_control/share/arm_control/package.dsv'
+[0.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.sh'
+[0.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.bash'
+[0.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.zsh'
+[0.657s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/arm_control/share/colcon-core/packages/arm_control)
+[0.657s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_control)
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control' for CMake module files
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control' for CMake config files
+[0.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_control', 'cmake_prefix_path')
+[0.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/arm_control/share/arm_control/hook/cmake_prefix_path.ps1'
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/arm_control/share/arm_control/hook/cmake_prefix_path.dsv'
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/arm_control/share/arm_control/hook/cmake_prefix_path.sh'
+[0.659s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/bin'
+[0.659s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/lib/pkgconfig/arm_control.pc'
+[0.659s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/lib/python3.10/site-packages'
+[0.659s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/arm_control/bin'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.ps1'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/arm_control/share/arm_control/package.dsv'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.sh'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.bash'
+[0.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/arm_control/share/arm_control/package.zsh'
+[0.661s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/arm_control/share/colcon-core/packages/arm_control)
+[0.661s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_workbench_toolbox)
+[0.661s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox' for CMake module files
+[0.662s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_workbench_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_toolbox
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox' for CMake config files
+[0.663s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_toolbox', 'cmake_prefix_path')
+[0.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/cmake_prefix_path.ps1'
+[0.663s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/cmake_prefix_path.dsv'
+[0.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/cmake_prefix_path.sh'
+[0.664s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/lib'
+[0.664s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_toolbox', 'ld_library_path_lib')
+[0.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/ld_library_path_lib.ps1'
+[0.664s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/ld_library_path_lib.dsv'
+[0.665s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/ld_library_path_lib.sh'
+[0.665s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/bin'
+[0.665s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/lib/pkgconfig/dynamixel_workbench_toolbox.pc'
+[0.665s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/lib/python3.10/site-packages'
+[0.665s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/bin'
+[0.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.ps1'
+[0.666s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.dsv'
+[0.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.sh'
+[0.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.bash'
+[0.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.zsh'
+[0.668s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_workbench_toolbox/share/colcon-core/packages/dynamixel_workbench_toolbox)
+[0.668s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_workbench_toolbox)
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox' for CMake module files
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox' for CMake config files
+[0.669s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_toolbox', 'cmake_prefix_path')
+[0.670s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/cmake_prefix_path.ps1'
+[0.670s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/cmake_prefix_path.dsv'
+[0.670s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/cmake_prefix_path.sh'
+[0.671s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/lib'
+[0.671s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_toolbox', 'ld_library_path_lib')
+[0.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/ld_library_path_lib.ps1'
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/ld_library_path_lib.dsv'
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/hook/ld_library_path_lib.sh'
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/bin'
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/lib/pkgconfig/dynamixel_workbench_toolbox.pc'
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/lib/python3.10/site-packages'
+[0.673s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_toolbox/bin'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.ps1'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.dsv'
+[0.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.sh'
+[0.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.bash'
+[0.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/package.zsh'
+[0.675s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_workbench_toolbox/share/colcon-core/packages/dynamixel_workbench_toolbox)
+[0.675s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/motor_control/src/tb4_arm_ros2/dynamixel_hardware' with build type 'ament_cmake'
+[0.675s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/motor_control/src/tb4_arm_ros2/dynamixel_hardware'
+[0.675s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.675s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.683s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench' with build type 'ament_cmake'
+[0.684s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/motor_control/src/dynamixel-workbench/dynamixel_workbench'
+[0.685s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.685s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.694s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/robot_arm/src/moviet' with build type 'ament_cmake'
+[0.694s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/robot_arm/src/moviet'
+[0.695s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.695s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.708s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_hardware': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --build /home/open/work/build/dynamixel_hardware -- -j16 -l16
+[0.715s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_workbench': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench -- -j16 -l16
+[0.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/moviet': CMAKE_PREFIX_PATH=/home/open/work/install/arm_control:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/moviet -- -j16 -l16
+[0.740s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_workbench_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench_msgs -- -j16 -l16
+[0.743s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_workbench_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_msgs
+[0.772s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_workbench)
+[0.772s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench' for CMake module files
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench' for CMake config files
+[0.775s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_workbench' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --build /home/open/work/build/dynamixel_workbench -- -j16 -l16
+[0.777s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench', 'cmake_prefix_path')
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/hook/cmake_prefix_path.ps1'
+[0.783s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/hook/cmake_prefix_path.dsv'
+[0.786s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_workbench': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench
+[0.788s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/hook/cmake_prefix_path.sh'
+[0.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/moviet' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/arm_control:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/moviet -- -j16 -l16
+[0.792s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/bin'
+[0.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/moviet': CMAKE_PREFIX_PATH=/home/open/work/install/arm_control:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/moviet
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/lib/pkgconfig/dynamixel_workbench.pc'
+[0.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_workbench' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/lib/python3.10/site-packages'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/bin'
+[0.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.ps1'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.dsv'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.sh'
+[0.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.bash'
+[0.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.zsh'
+[0.804s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_workbench/share/colcon-core/packages/dynamixel_workbench)
+[0.805s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_workbench)
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench' for CMake module files
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench' for CMake config files
+[0.806s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench', 'cmake_prefix_path')
+[0.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/hook/cmake_prefix_path.ps1'
+[0.807s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/hook/cmake_prefix_path.dsv'
+[0.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/hook/cmake_prefix_path.sh'
+[0.808s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/bin'
+[0.808s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/lib/pkgconfig/dynamixel_workbench.pc'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/lib/python3.10/site-packages'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench/bin'
+[0.809s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.ps1'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.dsv'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.sh'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.bash'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench/share/dynamixel_workbench/package.zsh'
+[0.812s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_workbench/share/colcon-core/packages/dynamixel_workbench)
+[0.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_hardware' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --build /home/open/work/build/dynamixel_hardware -- -j16 -l16
+[0.816s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moviet)
+[0.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/dynamixel_hardware': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --install /home/open/work/build/dynamixel_hardware
+[0.816s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet' for CMake module files
+[0.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/moviet' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/arm_control:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/moviet
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet' for CMake config files
+[0.818s] Level 1:colcon.colcon_core.shell:create_environment_hook('moviet', 'cmake_prefix_path')
+[0.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/moviet/share/moviet/hook/cmake_prefix_path.ps1'
+[0.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/moviet/share/moviet/hook/cmake_prefix_path.dsv'
+[0.819s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/moviet/share/moviet/hook/cmake_prefix_path.sh'
+[0.819s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/bin'
+[0.820s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/lib/pkgconfig/moviet.pc'
+[0.820s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/lib/python3.10/site-packages'
+[0.820s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/bin'
+[0.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.ps1'
+[0.821s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/moviet/share/moviet/package.dsv'
+[0.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.sh'
+[0.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.bash'
+[0.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.zsh'
+[0.822s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/moviet/share/colcon-core/packages/moviet)
+[0.823s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moviet)
+[0.823s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet' for CMake module files
+[0.824s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet' for CMake config files
+[0.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('moviet', 'cmake_prefix_path')
+[0.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/moviet/share/moviet/hook/cmake_prefix_path.ps1'
+[0.825s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/moviet/share/moviet/hook/cmake_prefix_path.dsv'
+[0.826s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/moviet/share/moviet/hook/cmake_prefix_path.sh'
+[0.826s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/bin'
+[0.826s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/lib/pkgconfig/moviet.pc'
+[0.826s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/lib/python3.10/site-packages'
+[0.827s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/moviet/bin'
+[0.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.ps1'
+[0.828s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/moviet/share/moviet/package.dsv'
+[0.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.sh'
+[0.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.bash'
+[0.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/moviet/share/moviet/package.zsh'
+[0.830s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/moviet/share/colcon-core/packages/moviet)
+[0.831s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_workbench_msgs)
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs' for CMake module files
+[0.832s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_workbench_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/dynamixel_workbench_msgs
+[0.834s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs' for CMake config files
+[0.834s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_msgs', 'cmake_prefix_path')
+[0.835s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/cmake_prefix_path.ps1'
+[0.835s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/cmake_prefix_path.dsv'
+[0.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/cmake_prefix_path.sh'
+[0.836s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/lib'
+[0.836s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_msgs', 'ld_library_path_lib')
+[0.837s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/ld_library_path_lib.ps1'
+[0.837s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/ld_library_path_lib.dsv'
+[0.838s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/ld_library_path_lib.sh'
+[0.838s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/bin'
+[0.838s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/lib/pkgconfig/dynamixel_workbench_msgs.pc'
+[0.838s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/lib/python3.10/site-packages'
+[0.839s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/bin'
+[0.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.ps1'
+[0.840s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.dsv'
+[0.840s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.sh'
+[0.840s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.bash'
+[0.841s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.zsh'
+[0.841s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_workbench_msgs/share/colcon-core/packages/dynamixel_workbench_msgs)
+[0.842s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_workbench_msgs)
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs' for CMake module files
+[0.843s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs' for CMake config files
+[0.843s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_msgs', 'cmake_prefix_path')
+[0.844s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/cmake_prefix_path.ps1'
+[0.844s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/cmake_prefix_path.dsv'
+[0.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/cmake_prefix_path.sh'
+[0.845s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/lib'
+[0.845s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_workbench_msgs', 'ld_library_path_lib')
+[0.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/ld_library_path_lib.ps1'
+[0.846s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/ld_library_path_lib.dsv'
+[0.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/hook/ld_library_path_lib.sh'
+[0.847s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/bin'
+[0.847s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/lib/pkgconfig/dynamixel_workbench_msgs.pc'
+[0.847s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/lib/python3.10/site-packages'
+[0.847s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_workbench_msgs/bin'
+[0.848s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.ps1'
+[0.848s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.dsv'
+[0.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.sh'
+[0.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.bash'
+[0.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_workbench_msgs/share/dynamixel_workbench_msgs/package.zsh'
+[0.850s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_workbench_msgs/share/colcon-core/packages/dynamixel_workbench_msgs)
+[0.851s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_hardware)
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware' for CMake module files
+[0.852s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/dynamixel_hardware' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble LD_LIBRARY_PATH=/home/open/work/install/dynamixel_workbench_toolbox/lib:/home/open/work/install/dynamixel_hardware/lib:/home/open/work/install/dynamixel_workbench_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64 /usr/bin/cmake --install /home/open/work/build/dynamixel_hardware
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware' for CMake config files
+[0.852s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_hardware', 'cmake_prefix_path')
+[0.853s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/cmake_prefix_path.ps1'
+[0.853s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/cmake_prefix_path.dsv'
+[0.853s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/cmake_prefix_path.sh'
+[0.854s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/lib'
+[0.854s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_hardware', 'ld_library_path_lib')
+[0.854s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/ld_library_path_lib.ps1'
+[0.855s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/ld_library_path_lib.dsv'
+[0.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/ld_library_path_lib.sh'
+[0.855s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/bin'
+[0.855s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/lib/pkgconfig/dynamixel_hardware.pc'
+[0.856s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/lib/python3.10/site-packages'
+[0.856s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/bin'
+[0.856s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.ps1'
+[0.857s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.dsv'
+[0.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.sh'
+[0.858s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.bash'
+[0.858s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.zsh'
+[0.859s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_hardware/share/colcon-core/packages/dynamixel_hardware)
+[0.859s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_hardware)
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware' for CMake module files
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware' for CMake config files
+[0.860s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_hardware', 'cmake_prefix_path')
+[0.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/cmake_prefix_path.ps1'
+[0.861s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/cmake_prefix_path.dsv'
+[0.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/cmake_prefix_path.sh'
+[0.862s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/lib'
+[0.862s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_hardware', 'ld_library_path_lib')
+[0.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/ld_library_path_lib.ps1'
+[0.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/ld_library_path_lib.dsv'
+[0.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/hook/ld_library_path_lib.sh'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/bin'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/lib/pkgconfig/dynamixel_hardware.pc'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/lib/python3.10/site-packages'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/dynamixel_hardware/bin'
+[0.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.ps1'
+[0.866s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.dsv'
+[0.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.sh'
+[0.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.bash'
+[0.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/dynamixel_hardware/share/dynamixel_hardware/package.zsh'
+[0.868s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/dynamixel_hardware/share/colcon-core/packages/dynamixel_hardware)
+[0.868s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_description' with build type 'ament_cmake'
+[0.868s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_description'
+[0.869s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.869s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/small_arm_description': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_description -- -j16 -l16
+[0.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/small_arm_description' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_description -- -j16 -l16
+[0.923s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/small_arm_description': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_description
+[0.933s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_arm_description)
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description' for CMake module files
+[0.934s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/small_arm_description' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/small_arm_description:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_description
+[0.935s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description' for CMake config files
+[0.935s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_arm_description', 'cmake_prefix_path')
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_description/share/small_arm_description/hook/cmake_prefix_path.ps1'
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/small_arm_description/share/small_arm_description/hook/cmake_prefix_path.dsv'
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_description/share/small_arm_description/hook/cmake_prefix_path.sh'
+[0.937s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/bin'
+[0.937s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/lib/pkgconfig/small_arm_description.pc'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/lib/python3.10/site-packages'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/bin'
+[0.938s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.ps1'
+[0.939s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/small_arm_description/share/small_arm_description/package.dsv'
+[0.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.sh'
+[0.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.bash'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.zsh'
+[0.940s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/small_arm_description/share/colcon-core/packages/small_arm_description)
+[0.941s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_arm_description)
+[0.941s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description' for CMake module files
+[0.942s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description' for CMake config files
+[0.942s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_arm_description', 'cmake_prefix_path')
+[0.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_description/share/small_arm_description/hook/cmake_prefix_path.ps1'
+[0.943s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/small_arm_description/share/small_arm_description/hook/cmake_prefix_path.dsv'
+[0.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_description/share/small_arm_description/hook/cmake_prefix_path.sh'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/bin'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/lib/pkgconfig/small_arm_description.pc'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/lib/python3.10/site-packages'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_description/bin'
+[0.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.ps1'
+[0.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/small_arm_description/share/small_arm_description/package.dsv'
+[0.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.sh'
+[0.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.bash'
+[0.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_description/share/small_arm_description/package.zsh'
+[0.947s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/small_arm_description/share/colcon-core/packages/small_arm_description)
+[0.948s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_config' with build type 'ament_cmake'
+[0.949s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_config'
+[0.949s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.949s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.969s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/small_arm_moveit_config': CMAKE_PREFIX_PATH=/home/open/work/install/small_arm_description:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_config -- -j16 -l16
+[1.020s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/small_arm_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/small_arm_description:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_config -- -j16 -l16
+[1.022s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/small_arm_moveit_config': CMAKE_PREFIX_PATH=/home/open/work/install/small_arm_description:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_config
+[1.033s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_arm_moveit_config)
+[1.033s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config' for CMake module files
+[1.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/small_arm_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/open/work/install/small_arm_description:/home/open/work/install/dynamixel_hardware:/home/open/work/install/dynamixel_workbench_toolbox:/home/open/work/install/small_arm_moveit_cpp:/home/open/work/install/small_arm_moveit_config:/home/open/work/install/moviet:/home/open/work/install/dynamixel_workbench:/home/open/work/install/dynamixel_workbench_msgs:/home/open/work/install/arm_control:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_config
+[1.034s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config' for CMake config files
+[1.034s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_arm_moveit_config', 'cmake_prefix_path')
+[1.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/hook/cmake_prefix_path.ps1'
+[1.035s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/hook/cmake_prefix_path.dsv'
+[1.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/hook/cmake_prefix_path.sh'
+[1.036s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/bin'
+[1.036s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/lib/pkgconfig/small_arm_moveit_config.pc'
+[1.036s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/lib/python3.10/site-packages'
+[1.036s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/bin'
+[1.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.ps1'
+[1.037s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.dsv'
+[1.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.sh'
+[1.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.bash'
+[1.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.zsh'
+[1.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/small_arm_moveit_config/share/colcon-core/packages/small_arm_moveit_config)
+[1.039s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_arm_moveit_config)
+[1.039s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config' for CMake module files
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config' for CMake config files
+[1.040s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_arm_moveit_config', 'cmake_prefix_path')
+[1.040s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/hook/cmake_prefix_path.ps1'
+[1.041s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/hook/cmake_prefix_path.dsv'
+[1.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/hook/cmake_prefix_path.sh'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/bin'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/lib/pkgconfig/small_arm_moveit_config.pc'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/lib/python3.10/site-packages'
+[1.042s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_config/bin'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.ps1'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.dsv'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.sh'
+[1.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.bash'
+[1.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_config/share/small_arm_moveit_config/package.zsh'
+[1.043s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/small_arm_moveit_config/share/colcon-core/packages/small_arm_moveit_config)
+[1.076s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/motor_control/src/core': PYTHONPATH=/home/open/work/build/core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/open/work/install/core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/core build --build-base /home/open/work/build/core/build install --record /home/open/work/build/core/install.log --single-version-externally-managed install_data
+[1.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/motor_control/src/realsense': PYTHONPATH=/home/open/work/build/realsense/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/open/work/install/realsense/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/realsense build --build-base /home/open/work/build/realsense/build install --record /home/open/work/build/realsense/install.log --single-version-externally-managed install_data
+[1.317s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/core' for CMake module files
+[1.318s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/motor_control/src/core' returned '0': PYTHONPATH=/home/open/work/build/core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/open/work/install/core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/core build --build-base /home/open/work/build/core/build install --record /home/open/work/build/core/install.log --single-version-externally-managed install_data
+[1.318s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/core' for CMake config files
+[1.318s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/core/lib'
+[1.318s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/core/bin'
+[1.318s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/core/lib/pkgconfig/core.pc'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/core/lib/python3.10/site-packages'
+[1.319s] Level 1:colcon.colcon_core.shell:create_environment_hook('core', 'pythonpath')
+[1.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/core/share/core/hook/pythonpath.ps1'
+[1.319s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/core/share/core/hook/pythonpath.dsv'
+[1.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/core/share/core/hook/pythonpath.sh'
+[1.320s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/core/bin'
+[1.320s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(core)
+[1.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/core/share/core/package.ps1'
+[1.320s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/core/share/core/package.dsv'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/core/share/core/package.sh'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/core/share/core/package.bash'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/core/share/core/package.zsh'
+[1.321s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/core/share/colcon-core/packages/core)
+[1.343s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/realsense' for CMake module files
+[1.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/motor_control/src/realsense' returned '0': PYTHONPATH=/home/open/work/build/realsense/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/open/work/install/realsense/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/realsense build --build-base /home/open/work/build/realsense/build install --record /home/open/work/build/realsense/install.log --single-version-externally-managed install_data
+[1.344s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/realsense' for CMake config files
+[1.345s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/realsense/lib'
+[1.345s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/realsense/bin'
+[1.345s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/realsense/lib/pkgconfig/realsense.pc'
+[1.345s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/realsense/lib/python3.10/site-packages'
+[1.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense', 'pythonpath')
+[1.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/realsense/share/realsense/hook/pythonpath.ps1'
+[1.345s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/realsense/share/realsense/hook/pythonpath.dsv'
+[1.346s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/realsense/share/realsense/hook/pythonpath.sh'
+[1.346s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/realsense/bin'
+[1.346s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense)
+[1.346s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/realsense/share/realsense/package.ps1'
+[1.347s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/realsense/share/realsense/package.dsv'
+[1.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/realsense/share/realsense/package.sh'
+[1.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/realsense/share/realsense/package.bash'
+[1.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/realsense/share/realsense/package.zsh'
+[1.348s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/realsense/share/colcon-core/packages/realsense)
+[10.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16
+[10.271s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_cpp
+[10.280s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_arm_moveit_cpp)
+[10.280s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp' for CMake module files
+[10.280s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_cpp
+[10.281s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp' for CMake config files
+[10.281s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_arm_moveit_cpp', 'cmake_prefix_path')
+[10.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/hook/cmake_prefix_path.ps1'
+[10.281s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/hook/cmake_prefix_path.dsv'
+[10.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/hook/cmake_prefix_path.sh'
+[10.282s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/lib'
+[10.282s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/bin'
+[10.282s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/lib/pkgconfig/small_arm_moveit_cpp.pc'
+[10.282s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/lib/python3.10/site-packages'
+[10.282s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/bin'
+[10.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.ps1'
+[10.283s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.dsv'
+[10.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.sh'
+[10.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.bash'
+[10.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.zsh'
+[10.284s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/small_arm_moveit_cpp/share/colcon-core/packages/small_arm_moveit_cpp)
+[10.284s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(small_arm_moveit_cpp)
+[10.284s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp' for CMake module files
+[10.284s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp' for CMake config files
+[10.284s] Level 1:colcon.colcon_core.shell:create_environment_hook('small_arm_moveit_cpp', 'cmake_prefix_path')
+[10.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/hook/cmake_prefix_path.ps1'
+[10.285s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/hook/cmake_prefix_path.dsv'
+[10.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/hook/cmake_prefix_path.sh'
+[10.285s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/lib'
+[10.285s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/bin'
+[10.285s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/lib/pkgconfig/small_arm_moveit_cpp.pc'
+[10.286s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/lib/python3.10/site-packages'
+[10.286s] Level 1:colcon.colcon_core.environment:checking '/home/open/work/install/small_arm_moveit_cpp/bin'
+[10.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.ps1'
+[10.286s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.dsv'
+[10.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.sh'
+[10.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.bash'
+[10.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.zsh'
+[10.287s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/open/work/install/small_arm_moveit_cpp/share/colcon-core/packages/small_arm_moveit_cpp)
+[10.287s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.287s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.288s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.288s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.291s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[10.291s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.291s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.291s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.293s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[10.293s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.294s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/open/work/install/local_setup.ps1'
+[10.294s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/open/work/install/_local_setup_util_ps1.py'
+[10.295s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/open/work/install/setup.ps1'
+[10.296s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/open/work/install/local_setup.sh'
+[10.296s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/open/work/install/_local_setup_util_sh.py'
+[10.297s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/open/work/install/setup.sh'
+[10.298s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/open/work/install/local_setup.bash'
+[10.298s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/open/work/install/setup.bash'
+[10.299s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/open/work/install/local_setup.zsh'
+[10.299s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/open/work/install/setup.zsh'

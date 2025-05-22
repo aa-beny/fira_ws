@@ -1,0 +1,99 @@
+[0.349s] Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake /home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp -DCMAKE_INSTALL_PREFIX=/home/open/work/install/small_arm_moveit_cpp
+[0.386s] -- The C compiler identification is GNU 11.4.0
+[0.423s] -- The CXX compiler identification is GNU 11.4.0
+[0.428s] -- Detecting C compiler ABI info
+[0.478s] -- Detecting C compiler ABI info - done
+[0.483s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.483s] -- Detecting C compile features
+[0.483s] -- Detecting C compile features - done
+[0.485s] -- Detecting CXX compiler ABI info
+[0.541s] -- Detecting CXX compiler ABI info - done
+[0.548s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.548s] -- Detecting CXX compile features
+[0.548s] -- Detecting CXX compile features - done
+[0.552s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.667s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.753s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[0.904s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[0.941s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.946s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.952s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.962s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.975s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.167s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.215s] -- Found parameter_traits: 0.4.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.250s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.253s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[1.269s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.277s] -- Found Threads: TRUE  
+[1.314s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.317s] -- Found rclcpp_lifecycle: 16.0.12 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.339s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[1.409s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.439s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.659s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[1.684s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[1.740s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[1.769s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.835s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.835s] -- Configured cppcheck include dirs: 
+[1.835s] -- Configured cppcheck exclude dirs and/or files: 
+[1.836s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.836s] -- Added test 'lint_cmake' to check CMake code style
+[1.837s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.838s] -- Added test 'uncrustify' to check C / C++ code style
+[1.838s] -- Configured uncrustify additional arguments: 
+[1.838s] -- Added test 'xmllint' to check XML markup files
+[1.839s] -- Configuring done
+[1.888s] -- Generating done
+[1.905s] -- Build files have been written to: /home/open/work/build/small_arm_moveit_cpp
+[1.918s] Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake /home/open/work/motor_control/src/tb4_arm_ros2/small_arm_moveit_cpp -DCMAKE_INSTALL_PREFIX=/home/open/work/install/small_arm_moveit_cpp
+[1.919s] Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16
+[1.959s] [ 10%] [32mBuilding CXX object CMakeFiles/named_goal.dir/src/named_goal.cpp.o[0m
+[1.959s] [ 20%] [32mBuilding CXX object CMakeFiles/ee_pose_in_base.dir/src/ee_pose_in_base.cpp.o[0m
+[1.959s] [ 30%] [32mBuilding CXX object CMakeFiles/gripper_joint_value.dir/src/gripper_joint_value.cpp.o[0m
+[1.959s] [ 50%] [32mBuilding CXX object CMakeFiles/eye_hand_pose.dir/src/eye_hand_pose.cpp.o[0m
+[1.959s] [ 50%] [32mBuilding CXX object CMakeFiles/auto_pose_goal.dir/src/auto_pose_goal.cpp.o[0m
+[11.984s] [ 60%] [32m[1mLinking CXX executable eye_hand_pose[0m
+[12.238s] [ 60%] Built target eye_hand_pose
+[15.328s] [ 70%] [32m[1mLinking CXX executable gripper_joint_value[0m
+[15.779s] [ 70%] Built target gripper_joint_value
+[15.813s] [ 80%] [32m[1mLinking CXX executable named_goal[0m
+[16.269s] [ 80%] Built target named_goal
+[16.561s] [ 90%] [32m[1mLinking CXX executable ee_pose_in_base[0m
+[17.334s] [ 90%] Built target ee_pose_in_base
+[17.930s] [100%] [32m[1mLinking CXX executable auto_pose_goal[0m
+[18.454s] [100%] Built target auto_pose_goal
+[18.461s] Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --build /home/open/work/build/small_arm_moveit_cpp -- -j16 -l16
+[18.462s] Invoking command in '/home/open/work/build/small_arm_moveit_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_cpp
+[18.466s] -- Install configuration: ""
+[18.466s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/named_goal
+[18.468s] -- Set runtime path of "/home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/named_goal" to ""
+[18.468s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/ee_pose_in_base
+[18.472s] -- Set runtime path of "/home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/ee_pose_in_base" to ""
+[18.472s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/eye_hand_pose
+[18.472s] -- Set runtime path of "/home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/eye_hand_pose" to ""
+[18.472s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/auto_pose_goal
+[18.475s] -- Set runtime path of "/home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/auto_pose_goal" to ""
+[18.475s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/gripper_joint_value
+[18.476s] -- Set runtime path of "/home/open/work/install/small_arm_moveit_cpp/lib/small_arm_moveit_cpp/gripper_joint_value" to ""
+[18.476s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/launch
+[18.476s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/launch/motion_planning.launch.py
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/config
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/config/moveit_cpp.yaml
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/ament_index/resource_index/package_run_dependencies/small_arm_moveit_cpp
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/ament_index/resource_index/parent_prefix_path/small_arm_moveit_cpp
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/ament_prefix_path.sh
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/ament_prefix_path.dsv
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/path.sh
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/environment/path.dsv
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.bash
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.sh
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.zsh
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/local_setup.dsv
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.dsv
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/ament_index/resource_index/packages/small_arm_moveit_cpp
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/cmake/small_arm_moveit_cppConfig.cmake
+[18.477s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/cmake/small_arm_moveit_cppConfig-version.cmake
+[18.478s] -- Installing: /home/open/work/install/small_arm_moveit_cpp/share/small_arm_moveit_cpp/package.xml
+[18.479s] Invoked command in '/home/open/work/build/small_arm_moveit_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/open/work/install/realsense:/home/open/work/install/core:/opt/ros/humble /usr/bin/cmake --install /home/open/work/build/small_arm_moveit_cpp

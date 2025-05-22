@@ -24,6 +24,10 @@ class TaskMaster(Node):
         self.gripper_cmd = self.create_publisher(Bool, '/gripper_command', 10)  # 控制夾爪夾取或放開
         self.car_to_drop = self.create_publisher(Bool, '/car_to_drop_zone', 10)  # 通知車子前往放置區
         self.ocr_target_pub = self.create_publisher(String, '/target_ocr', 10)  # 傳送要追蹤的字母與畫面座標給 depth 模組
+        self.car_command_pub = self.create_publisher(String, '/car_command', 10)
+
+        self.task_mode_pub = self.create_publisher(Bool, '/task_mode', 10)
+        
 
         self.current_letter = None  # 紀錄目前要處理的字母（例：'F'）
         self.drop_letter_pose_dict = {}  # 儲存放置區辨識出來的所有字母與畫面座標
@@ -31,9 +35,16 @@ class TaskMaster(Node):
         self.allow_pose_disabled_for_drop = False  # 確保放置階段的 allow_pose 只發一次
 
         self.pose_resend_timer = self.create_timer(0.2, self.pose_timer_callback)
-
+        # 新增：分檢流程設定
+        self.sorting_zones = ['B', 'C', 'D']  # 三個分檢區
+        self.all_letters = ['F', 'I', 'R', 'A']  # 四個字母
+        self.letter_to_zone = {}  # （可擴充：每個字母屬於哪個區）
+        self.sorting_tasks = []  # 儲存要去哪些區（目前未使用）
+        self.current_zone_index = 0  # 現在第幾個分檢區
+        
         self.get_logger().info('✅ Task Master node initialized')  # 印出初始化完成訊息
-
+        self.get_logger().info('🚀 Starting: sending car to first sorting zone B')
+        self.car_command_pub.publish(String(data='B'))
         self.waiting_for_pose = False  # ➕ 加這個
 
         # 開始執行主迴圈，這是一個背景執行緒，每 0.2 秒執行一次
@@ -47,6 +58,9 @@ class TaskMaster(Node):
             self.allow_pose_disabled_for_drop = False  # 重設旗標以允許新的 pose 發布
             self.send_gripper(True)
             self.state = 'PICK_MODE'  # 進入抓取階段
+            
+            # 每次切換模式時呼叫
+            self.task_mode_pub.publish(Bool(data=(self.state == 'DROP_MODE')))
 
             self.pose_done = False
 
@@ -55,7 +69,7 @@ class TaskMaster(Node):
 
             self.allow_pose_disabled_for_drop = False
             self.car_arrived_for_drop = True  # 標記已到達放置區
-
+            self.task_mode_pub.publish(Bool(data=(self.state == 'DROP_MODE')))
             self.pose_done = False
 
     # OCR 模組辨識出文字後會進入這個函式
@@ -197,7 +211,9 @@ class TaskMaster(Node):
                 self.move_to_photo_pose()  # 回拍照點
                 self.get_logger().info('🔁 Returned to photo position, sending car to drop zone')
                 self.car_to_drop.publish(Bool(data=True))  # 通知車子去放置區
+                self.car_command_pub.publish(String(data='E'))
                 self.state = 'DROP_MODE'  # 切換到放置階段
+
 
             elif self.state == 'DROP_MODE':
                 self.send_gripper(True)  # 放開
@@ -206,6 +222,37 @@ class TaskMaster(Node):
                 self.processed_letters.add(self.current_letter)  # 標記已處理
                 self.current_letter = None
                 self.car_arrived_for_drop = False
+                                # 檢查是否要切換分檢區或回家
+                # 🔍 檢查我們是不是已經把 4 個字母都處理完了？
+                # 這邊會去看 self.processed_letters 這個「已處理字母清單」裡面有幾個字
+                # 如果已經有 4 個字母（F, I, R, A）就代表任務完成
+                if len(self.processed_letters) == 4:
+
+                    # ✅ 印出「任務完成，準備回家」
+                    self.get_logger().info("🏁 All letters done. Going home.")
+
+                    # 🏡 發一個指令給車子：「去 A 地點」→ 代表回家
+                    self.car_command_pub.publish(String(data='A'))
+
+                # 🚗 如果還沒完成所有字母，而且還有下一個分檢區可以去，就進入這個判斷
+                elif self.current_zone_index < len(self.sorting_zones):
+
+                    # 🧭 從 sorting_zones（像 ['B', 'C', 'D']）這個清單中，找現在要去的區域
+                    # 比如 current_zone_index = 1，就會是 C
+                    next_zone = self.sorting_zones[self.current_zone_index]
+
+                    # ✅ 印出訊息：「準備去下一個分檢區」
+                    self.get_logger().info(f"🚗 Moving to next sorting zone {next_zone}")
+
+                    # 🗺️ 發一個指令給車子：「去分檢區 B / C / D」
+                    self.car_command_pub.publish(String(data=next_zone))
+
+                    # ➕ 下一次就跳到下一個區（B → C → D）
+                    self.current_zone_index += 1
+
+                # 🔄 無論是回家還是去下一區，我們都會把狀態切換成「等待車子到」
+                # 接下來就等 /car_arrived 的訊號來觸發下一步
+                # self.state = 'WAIT_FOR_CAR'
                 self.state = 'WAIT_FOR_CAR'  # 回到等車階段
             # elif msg.data == "[POSE_GOAL] Failed":
         else:

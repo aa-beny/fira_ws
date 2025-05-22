@@ -1,0 +1,6 @@
+[35m[1mConsolidate compiler generated dependencies of target gripper_joint_value[0m
+[ 20%] Built target ee_pose_in_base
+[ 60%] Built target named_goal
+[ 60%] Built target eye_hand_pose
+[ 80%] Built target auto_pose_goal
+[ 90%] [32mBuilding CXX object CMakeFiles/gripper_joint_value.dir/src/gripper_joint_value.cpp.o[0m

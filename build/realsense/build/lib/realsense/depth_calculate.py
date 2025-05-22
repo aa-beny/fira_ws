@@ -262,6 +262,8 @@ class RGBPixelTo3D(Node):
         u_start = w // 2 - box_size // 2
         v_start = h // 2 - box_size // 2
 
+
+        
         points = []
         uvs = []
         region_depths = []
@@ -338,26 +340,26 @@ class RGBPixelTo3D(Node):
         #     self.target_z = 0.105   # 中0.553
         #     self.get_logger().info("Height: HIGH")
 
-        # if 0.31 < self.avg_z < 0.38: # 0.338 0.339 0.319
-        #     self.target_z = 0.01  
-        #     self.get_logger().info("Height: LOW")
-        # elif 0.28 < self.avg_z < 0.31:
-        #     # self.target_z = 0.06  # 中等高度0.297  0.368 0.367  0.38 0.336
-        #     self.target_z = 0.058  
-        #     self.get_logger().info("Height: MID")
-        # else:
-        #     self.target_z = 0.105   # 中0.553
-        #     self.get_logger().info("Height: HIGH")
-
-        if self.avg_z < 0.29:
-            self.target_z = 0.105  # HIGH
-            self.get_logger().info("Height: HIGH")
-        elif self.avg_z < 0.37:
-            self.target_z = 0.058  # MID
+        if 0.345 < self.avg_z < 0.38: # 9 0.354 0.36
+            self.target_z = 0.01  
+            self.get_logger().info("Height: LOW")
+        elif 0.315 < self.avg_z < 0.345:
+            # self.target_z = 0.06  # 中等高度0.313  0.32
+            self.target_z = 0.058  
             self.get_logger().info("Height: MID")
         else:
-            self.target_z = 0.01   # LOW
-            self.get_logger().info("Height: LOW")
+            self.target_z = 0.105   # 0.3
+            self.get_logger().info("Height: HIGH")
+
+        # if self.avg_z < 0.29:
+        #     self.target_z = 0.105  # HIGH
+        #     self.get_logger().info("Height: HIGH")
+        # elif self.avg_z < 0.37:
+        #     self.target_z = 0.058  # MID
+        #     self.get_logger().info("Height: MID")
+        # else:
+        #     self.target_z = 0.01   # LOW
+        #     self.get_logger().info("Height: LOW")
         
 
         result = self.ransac_plane_fit(np.array(points))
